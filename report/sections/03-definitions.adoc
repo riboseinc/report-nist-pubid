@@ -1,0 +1,20 @@
+
+== Terms and definitions
+
+=== document identifier
+
+string of text that uniquely identifies a document
+
+=== metadata-enhanced document identifier
+
+{{unique document identifier}} that embeds metadata information about
+the document itself
+
+[example]
+A NIST PubID, such as "NIST SP (IPD) 800-53r5" embeds the document series,
+document stage and revision information.
+
+=== machine-readable data structure
+
+data structure suited for machine interpretation where its
+individual data elements are easily discernable

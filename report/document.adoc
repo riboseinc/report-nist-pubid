@@ -1,0 +1,52 @@
+= Comments on the "`Publication Identifier Syntax for NIST Technical Series Publications`"
+:edition: 1
+:docnumber: 11023
+:copyright-year: 2021
+:revdate: 2021-09-30
+:published-date: 2021-09-30
+:security: unrestricted
+:doctype: report
+:recipient: techpubs@nist.gov
+:publisher: Ribose Limited
+:pub-address: 3rd Floor + \
+11-12 St James's Square + \
+London SW1Y 4LB + \
+United Kingdom
+:committee: Standardization
+:committee-type: technical
+:fullname: Ronald Tse
+:surname: Tse
+:givenname: Ronald
+:affiliation: Ribose
+:fullname_2: Nick Nicholas
+:surname_2: Nicholas
+:givenname_2: Nick
+:affiliation_2: Ribose
+:mn-document-class: ribose
+:mn-output-extensions: xml,html,rxl,pdf
+:imagesdir: images
+:local-cache-only:
+:data-uri-image:
+
+
+include::sections/00-foreword.adoc[]
+
+include::sections/00-exec-sum.adoc[]
+
+// include::sections/01-introduction.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-references.adoc[]
+
+include::sections/03-definitions.adoc[]
+
+include::sections/04-proposal.adoc[]
+
+include::sections/80-recommendations.adoc[]
+
+include::sections/90-data-elements.adoc[]
+
+include::sections/91-patterns.adoc[]
+
+include::sections/99-bibliography.adoc[]

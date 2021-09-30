@@ -1,0 +1,195 @@
+
+== Recommendations
+
+=== Recommendation 1: Generate machine-readable identifiers
+
+==== General
+
+Machines are increasingly used to parse and correlate content given in digital
+formats, and that applies to document identifiers as well.
+
+Machine-readable, or format restricted document identifiers are immensely
+useful, for example, the naming of DOI identifiers and encoding within
+databases.
+
+The perpetual enemy of machine-readability is ambiguity. With the PubID data
+elements, a machine-readable identifier will provide a machine a "single-step"
+understanding where individual data elements of the identifier can be
+parsed and understood with minimal effort.
+
+The last bullet of the last bullet in <<PUBID,clause=3.1>> demonstrates
+consideration of characters allowed in DOI suffixes, and hints that the
+PubID scheme complies with the requirements of a DOI suffix, by
+stating that these characters are allowed: `-._,()/`.
+
+However, DOIs are to be used within URLs. The standard for URLs,
+<<RFC3986,clause="2.3">> clearly states that only the following characters do
+not get "percent-encoded":
+
+____
+For consistency, percent-encoded octets in the ranges of ALPHA
+(%41-%5A and %61-%7A), DIGIT (%30-%39), hyphen (%2D), period (%2E),
+underscore (%5F), or tilde (%7E) should not be created by URI
+producers and, when found in a URI, should be decoded to their
+corresponding unreserved characters by URI normalizers.
+____
+
+This means that these characters: comma `,`, open and close parentheses `()`,
+should be percent-encoded, and hence causing an unnecessary rewrite of the
+URL for the user.
+
+
+==== Proposal
+
+[[figure1]]
+.PubID core data elements and its rendered outputs
+image::nist-pubid-formats.svg[PubID outputs]
+
+<<figure1>> shows how the PubID data elements, by providing a machine-readable
+data structure, enables a stable core for these various output formats to be
+generated.
+
+We propose extending the functionality of the PubID scheme such that it
+generates a corresponding, deterministic identifier that is easily
+machine-parseable for machine consumption, for purposes such as DOI, where
+it only utilizes the ASCII characters in the set of
+`ALPHA`, `DIGIT`, `hyphen` and `period`.
+
+In particular, the machine-readable PubID ("MRID") utilizes periods instead
+of spaces as element delimiters.
+
+The proposed scheme, by design, is meant to be very similar to existing
+assignments of DOI to NIST Tech Pubs.
+
+The scheme is presented in <<patterns-mr>>.
+
+
+=== Recommendation 2: Support rendering PubID into long and abbreviated formats
+
+==== Background
+
+The NIST PubID scheme (<<PUBID>>) defines a metadata-enhanced document
+identifier scheme that allows generation of a unique reference using a set
+of defined data elements.
+
+A traditional NIST Tech Pub practice, especially in CSRC publications, is to
+provide the following variant forms of document identifiers within the document
+itself:
+
+* Full form, used in the title and the bibliography for citations
++
+====
+"National Institute of Standards and Technology Special Publication 800-27, Revision A"
+====
+
+* Abbreviated form, used in the "Authority" section
++
+====
+"Natl. Inst. Stand. Technol. Spec. Publ. 800-57 Part 1, Revision 4"
+====
+
+* Short form, used for inline citations
++
+====
+"In Section 3.2 of SP 800-187..."
+====
+
+
+==== Proposal
+
+NIST PubID today provides an identifier that can be used as a short form,
+given the compactness of its syntax.
+
+As the "full form" and "abbreviated form" identifiers already exist within a
+document, and that the PubID data elements already provide sufficient
+information to generate such output, we recommend to allow the generation of the
+"full form" and "abbreviated form" identifiers as well.
+
+This change can be enacted by creating "full form" and "abbreviated form"
+generation templates -- extend every data element to also provide their
+"full form" and "abbreviated form" representation.
+
+The proposed list of data elements (with alternative form representations)
+is provided in <<annexa>>.
+
+
+
+=== Recommendation 3: Extend PubID coverage to the full NIST Tech Pubs history
+
+==== Background
+
+The NIST PubID scheme (<<PUBID>>) defines a metadata-enhanced document
+identifier scheme that allows generation of a unique reference to a NIST Tech
+Pub document without ambiguity.
+
+There are at least two major "pattern series" of identifiers before
+the introduction of PubID due to historical reasons:
+
+* NIST publications produced prior to the PubID scheme (1988-)
+* NBS publications, produced under the National Bureau of Standards (the
+  previous name of NIST, 1901 to 1988)
+
+Ribose has implemented the PubID scheme in its Relaton bibliographic software,
+allowing for the lossless translation of an existing NIST Tech Pub document
+identifier into (and from) a NIST PubID.
+
+NOTE: Relaton is an open-source toolchain developed by Ribose for the publication,
+retrieval and citation of information resources. It adopts an internal data
+model from <<ISO_690>> which allows a machine-readable citation to be built
+from a defined set of data elements. The Relaton format is used to serve
+bibliographic data from the CalConnect Standards Registry,
+the IETF BibXML service, and from the NIST CSRC Metanorma endpoint.
+
+The open-source Relaton web service routinely imports two datasets from NIST
+in order to facilitate citations for NIST authors, including:
+
+. the NIST CSRC Metanorma endpoint, which serves CSRC publications;
+. the NIST Library's Tech Pubs GitHub repository, which serves an export of
+  CrossRef bibliographic data for NIST Tech Pubs, curated by the NIST Library.
+
+NOTE: The CSRC endpoint provides additional bibliographic detail not provided
+by the CrossRef set, and also provides data on pre-publication stage documents
+while the latter set only provides data on published documents.
+
+NOTE: The Relaton NIST bibliographic dataset was built and offered to the public
+sanctioned by the relevant parties at NIST.
+
+
+==== Proposal
+
+Ribose has back-tested the full database of 19,283 NIST Tech Publications with
+the PubID scheme, including with documents published under NBS, and the scheme
+applies well given minor tweaks. These publications span the publication years
+of 1901 to 2021.
+
+We have built up a full list of NIST and NBS Tech Pubs series in
+<<element-series>>, and all of them have shown to work with the PubID scheme.
+
+Adoption of this recommendation requires the creation of a new "publisher" data
+element (<<element-publisher>>), where it can be "NIST" or "NBS".
+
+
+
+=== Recommendation 4: Support extra part types
+
+==== Background
+
+In <<PUBID>> the part types supported include "Part", "Volume", "Section",
+"Supplement" and "Index".
+
+However, in the NIST Library's collection of NIST Tech Pubs, there
+are also the following types of documents:
+
+. Addendum. "NIST SP 800-38A" has a separately published addendum;
+. Insert. "NBS CIRC 25 insert" is an insert;
+. Errata. "NIST SP 801-errata" is a published errata.
+
+==== Recommendation
+
+Support these additional part types with the following encoding:
+
+. Addendum. *"add"* followed by potentially a number;
+. Insert. *"ins"*;
+. Errata. *err*".
+
+The full list of part types is given in <<elements-part>>.

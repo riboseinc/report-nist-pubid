@@ -1,0 +1,11 @@
+
+[bibliography]
+== Normative references
+
+The following document is referred to in the text in such a
+way that some or all of its content constitutes requirements of this
+document.
+
+* [[[PUBID,NIST PubID]]], NIST. _Publication Identifier Syntax for NIST Technical Series Publications_. 2021-08.
+
+* [[[ISO_690,ISO 690:2021]]]

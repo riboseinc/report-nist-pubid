@@ -1,0 +1,9 @@
+---
+metanorma:
+  source:
+    files:
+      - report/document.adoc
+
+  collection:
+    organization: Ribose
+    name: Comments on the "`Publication Identifier Syntax for NIST Technical Series Publications`"

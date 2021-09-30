@@ -1,0 +1,23 @@
+
+[[conclusion]]
+== Summary
+
+Ribose has provided a list of recommendations to enrich the NIST PubID scheme
+detailed in the "`Publication Identifier Syntax for NIST Technical Series
+Publications`" document.
+
+Having been involved with the PubID idea, we believe it is an exemplary work
+that other organizations could adopt as best practice, and we are committed to
+be early adopter of the NIST PubID scheme:
+
+* Ribose has enhanced the NIST version of Metanorma to automatically embed the
+NIST PubID within its default metadata.
+
+* Ribose has updated its open-source Relaton bibliographic management software
+which enables users to directly cite information using NIST PubID.
+
+Ribose expresses appreciation to NIST for the opportunity to submit these
+comments. The authors would especially like to thank Jim Foti of the
+Computer Security Division, Kathryn Miller and Kate Bucher of the Information
+Services Office for continuously improving NIST's approach to developing
+and publishing the NIST Technical Series of publications.

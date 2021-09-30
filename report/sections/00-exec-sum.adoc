@@ -1,0 +1,41 @@
+
+[[exec-sum]]
+== Executive summary
+
+This document provides comments in response to the
+"`Publication Identifier Syntax for NIST Technical Series Publications`"
+document issued August 2021.
+
+Ribose is a technology leader committed to open-source in the publication of
+machine-readable standards and normative content through its work with
+international, national and industry standards development organizations.
+
+We laud the innovative and structured approach of the PubID syntax, and have
+implemented the NIST PubID scheme in our open-source Relaton bibliographic
+management software.
+The NIST version of Ribose's Metanorma open-source publication toolchain
+now supports citations using PubID.
+
+We have back-tested the implementation of the NIST PubID scheme against the full
+NIST Library catalog of 19,283 NIST Tech Publications published between 1901 to
+2021, dating back to those published by NIST's predecessor NBS, the National
+Bureau of Standards.
+
+A list of recommended improvements are detailed in the document, including:
+
+. Extend the functionality of the PubID scheme such that it generates a
+  corresponding, deterministic identifier that is easily machine-parseable for
+  machine consumption, for purposes such as DOI;
+
+. Extend PubID rendering to support readable full-form identifiers and
+  abbreviated identifiers currently used within NIST Tech Pubs, in addition
+  to the current short-form PubID described in the document;
+
+. Extend PubID coverage to the full NIST Tech Pubs history, including to
+  documents published by the predecessor of NIST -- NBS;
+
+. Support additional "`part types`" values including insert, addendum and errata
+  that exist in the NIST Tech Pubs history.
+
+We strongly support this work, and welcome any questions or potential forms of
+collaboration given that it is one where we have an involved history with.

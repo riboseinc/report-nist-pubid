@@ -1,0 +1,19 @@
+= Ribose comments to Publication Identifier Syntax for NIST Technical Series Publications
+
+== Purpose
+
+Comments for Publication Identifier Syntax for NIST Technical Series Publications.
+
+
+== Usage
+
+[source,sh]
+----
+bundle exec metanorma site generate
+open site/index.html
+----
+
+
+== License
+
+Copyright Ribose 2021.

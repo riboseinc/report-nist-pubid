@@ -1,0 +1,6 @@
+
+== Scope
+
+This document provides comments and proposals in response to the
+"`Publication Identifier Syntax for NIST Technical Series Publications`"
+document issued August 2021.

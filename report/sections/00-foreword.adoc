@@ -1,0 +1,22 @@
+.Foreword
+
+Ribose is an award-winning global developer of asymmetric security
+and standardization technologies trusted by industries with
+heightened cybersecurity needs. Ribose is a Deloitte
+Technology FAST 20 and Red Herring Top 100 Global company, and
+recipient of the CSA APAC Enterprise Award and multiple Stevie® Awards
+for its innovations.
+
+Organizations that depend on Ribose solutions include Mozilla, the
+International Telecommunications Union, the International Standards
+Organization, the Internet Engineering Task Force,
+the British Standards Institution, the Ministry of Defense (UK) and other
+government agencies.
+
+Ribose is the only cloud service provider (CSP) triple-assured by
+the Cloud Security Alliance, the first CSP to receive BSI's Kitemark
+for Secure Digital Transactions, and the first to achieve
+certification to the highest security tiers in NIST CSF and MTCS. It
+is also certified to ISO 9001, ISO 14001, ISO/IEC 20000, ISO 22301,
+ISO/IEC 27001, ISO/IEC 27017, ISO/IEC 27018, ISO/IEC 27701,
+ISO 45001 and ISO 50001.
