@@ -1,5 +1,12 @@
 = Ribose comments to Publication Identifier Syntax for NIST Technical Series Publications
 
+image:https://github.com/riboseinc/report-nist-pubid/actions/workflows/pages.yml/badge.svg["pages", link="https://github.com/riboseinc/report-nist-pubid/actions/workflows/pages.yml"]
+
+View the documents here:
+
+* https://riboseinc.github.io/report-nist-pubid/[Ribose comments to NIST PubID]
+
+
 == Purpose
 
 Comments for Publication Identifier Syntax for NIST Technical Series Publications.
