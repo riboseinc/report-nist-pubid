@@ -7,7 +7,7 @@ string of text that uniquely identifies a document
 
 === metadata-enhanced document identifier
 
-{{unique document identifier}} that embeds metadata information about
+unique {{document identifier}} that embeds metadata information about
 the document itself
 
 [example]
