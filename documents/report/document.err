@@ -1,0 +1,31 @@
+/__w/report-nist-pubid/report-nist-pubid/site/documents/report/document.err errors
+
+
+== Document Attributes
+
+(): published is not a recognised status
+
+
+== Metanorma XML Syntax
+
+(XML Line 000017:42): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000017:70): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000017:90): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000019:350): element "recipient" not allowed here; expected the element end-tag
+(XML Line 000019:42): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000019:70): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000019:90): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000058:44): element "executivesummary" not allowed here; expected the element end-tag or element "abstract", "acknowledgements", "clause", "foreword" or "introduction"
+(XML Line 000058:44): found attribute "id", but no attributes allowed here
+(XML Line 000060:47): found attribute "id", but no attributes allowed here
+(XML Line 000062:47): found attribute "id", but no attributes allowed here
+(XML Line 000064:47): found attribute "id", but no attributes allowed here
+(XML Line 000066:47): found attribute "id", but no attributes allowed here
+(XML Line 000068:47): found attribute "id", but no attributes allowed here
+(XML Line 000070:112): found attribute "id", but no attributes allowed here
+(XML Line 000070:62): found attribute "id", but no attributes allowed here
+(XML Line 000070:62): found attribute "type", but no attributes allowed here
+(XML Line 000074:51): found attribute "id", but no attributes allowed here
+(XML Line 000078:51): found attribute "id", but no attributes allowed here
+(XML Line 000081:51): found attribute "id", but no attributes allowed here
+(XML Line 000086:47): found attribute "id", but no attributes allowed here

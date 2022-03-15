@@ -1,0 +1,17 @@
+<bibdata type="standard">
+<title language="en" format="text/plain">Comments on the "Publication Identifier Syntax for NIST Technical Series Publications"</title>
+<docidentifier type="Ribose">Rept 11023</docidentifier><docnumber>11023</docnumber><date type="published"><on>2021-12-22</on></date><contributor><role type="author"/><organization>
+<name>Ribose Limited</name>
+</organization></contributor><contributor><role type="author"/><person>
+<name><completename>Ronald Tse</completename></name>
+<affiliation><organization>
+<name>Ribose</name>
+</organization></affiliation></person></contributor><contributor><role type="author"/><person>
+<name><completename>Nick Nicholas</completename></name>
+<affiliation><organization>
+<name>Ribose</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>Ribose Limited</name>
+<address><formattedAddress>3rd Floor<br/>11-12 St James's Square<br/>London SW1Y 4LB<br/>United Kingdom</formattedAddress></address></organization></contributor><edition>2</edition><version><revision-date>2021-12-22</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2021</from><owner><organization>
+<name>Ribose Limited</name>
+<address><formattedAddress>3rd Floor<br/>11-12 St James's Square<br/>London SW1Y 4LB<br/>United Kingdom</formattedAddress></address></organization></owner></copyright><ext><doctype abbreviation="Rept">report</doctype><editorialgroup><committee type="technical">Standardization</committee></editorialgroup><security>unrestricted</security><recipient>techpubs@nist.gov</recipient></ext></bibdata>

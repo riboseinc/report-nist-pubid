@@ -1,0 +1,79 @@
+<relaton-collection xmlns="https://open.ribose.com/relaton-xml"><title>Comments on the "`Publication Identifier Syntax for NIST Technical Series Publications`"</title><contributor><role type='author'/><organization><name>Ribose</name></organization></contributor><relation type='partOf'><bibdata type="standard">
+  <title format="text/plain" language="en">Comments on the "Publication Identifier Syntax for NIST Technical Series Publications"</title>
+  <uri type="xml">documents/report/document.xml</uri>
+  <uri type="pdf">documents/report/document.pdf</uri>
+  <uri type="html">documents/report/document.html</uri>
+  <uri type="rxl">documents/report/document.rxl</uri>
+  <docidentifier type="Ribose">Rept 11023</docidentifier>
+  <docnumber>11023</docnumber>
+  <date type="published">
+    <on>2021-12-22</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Ribose Limited</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Ronald Tse</completename>
+      </name>
+      <affiliation>
+        <organization>
+          <name>Ribose</name>
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Nick Nicholas</completename>
+      </name>
+      <affiliation>
+        <organization>
+          <name>Ribose</name>
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Ribose Limited</name>
+      <address>
+        <city/>
+        <country/>
+      </address>
+    </organization>
+  </contributor>
+  <edition>2</edition>
+  <version>
+    <revision-date>2021-12-22</revision-date>
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>published</stage>
+  </status>
+  <copyright>
+    <from>2021</from>
+    <owner>
+      <organization>
+        <name>Ribose Limited</name>
+        <address>
+          <city/>
+          <country/>
+        </address>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>report</doctype>
+  </ext>
+</bibdata></relation>
+</relaton-collection>

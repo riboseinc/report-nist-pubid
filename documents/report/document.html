@@ -1,0 +1,1969 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+  <!--
+/*
+    0 CSS RESET
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline; }
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Source Sans Pro",sans-serif; }
+
+code, pre, tt, kbd, samp {
+  font-family: "Source Code Pro",monospace;
+  font-variant-ligatures: none; }
+
+code *, pre *, tt *, kbd *, samp * {
+  font-family: "Source Code Pro",monospace !important;
+  font-variant-ligatures: none; }
+
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: 12px; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro",sans-serif; }
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Source Sans Pro",sans-serif; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+.h2Annex {
+  font-family: "Source Sans Pro",sans-serif; }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto; }
+  dl dt p, dl dd p {
+    margin-top: 0; }
+  dl dt {
+    grid-column-start: 1; }
+  dl dd {
+    grid-column-start: 2; }
+
+b, strong {
+  font-weight: bold; }
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333; }
+
+a.FootnoteRef + a.FootnoteRef:before {
+  content: ", ";
+  vertical-align: super; }
+
+.addition {
+  color: blue; }
+
+.deletion {
+  color: red;
+  text-decoration: line-through; }
+
+#standard-band {
+  background-color: #0AC442; }
+
+#standard {
+  border-bottom: solid 3px #0AC442; }
+
+#directive-band {
+  background-color: #540D6E; }
+
+#directive {
+  border-bottom: solid 3px #540D6E; }
+
+#guide-band {
+  background-color: #D183C9; }
+
+#guide {
+  border-bottom: solid 3px #D183C9; }
+
+#specification-band {
+  background-color: #65AFFF; }
+
+#specification {
+  border-bottom: solid 3px #65AFFF; }
+
+#report-band {
+  background-color: #3A405A; }
+
+#report {
+  border-bottom: solid 3px #3A405A; }
+
+#amendment-band {
+  background-color: #F26430; }
+
+#amendment {
+  border-bottom: solid 3px #F26430; }
+
+#corrigendum-band {
+  background-color: #C84630; }
+
+#corrigendum {
+  border-bottom: solid 3px #C84630; }
+
+#administrative-band {
+  background-color: #BFAE48; }
+
+#administrative {
+  border-bottom: solid 3px #BFAE48; }
+
+#advisory-band {
+  background-color: #BD9391; }
+
+#advisory {
+  border-bottom: solid 3px #BD9391; }
+
+#proposal-band {
+  background-color: #39A0ED; }
+
+#proposal {
+  border-bottom: solid 3px #39A0ED; }
+
+#working-draft-band {
+  background-color: #2D7393; }
+
+#working-draft {
+  border-bottom: solid 3px #2D7393; }
+
+#committee-draft-band {
+  background-color: #2A6B7C; }
+
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C; }
+
+#draft-standard-band {
+  background-color: #1C7F7A; }
+
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A; }
+
+#final-draft-band {
+  background-color: #53C170; }
+
+#final-draft {
+  border-bottom: solid 3px #53C170; }
+
+#published-band {
+  background-color: #069E2D; }
+
+#published {
+  border-bottom: solid 3px #069E2D; }
+
+#withdrawn-band {
+  background-color: #004E64; }
+
+#withdrawn {
+  border-bottom: solid 3px #004E64; }
+
+#cancelled-band {
+  background-color: #2E382E; }
+
+#cancelled {
+  border-bottom: solid 3px #2E382E; }
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4em;
+  color: #1d1d1d;
+  background-color: #ffffff; }
+  body main {
+    margin: 0 3em 0 6em; }
+
+main {
+  margin: 0 3em 0 6em; }
+
+#toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: 400; }
+  #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+      padding: 5px 10px; }
+    #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+      color: #485094;
+      text-decoration: none;
+      display: block; }
+      #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+        box-shadow: none;
+        color: #485094; }
+  #toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+    padding-left: 30px; }
+  #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+    padding-left: 50px; }
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: #1661AD;
+    box-shadow: inset -5px 0px 10px -5px #1661AD !important; }
+    #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+      color: #485094; }
+  @media print {
+    #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+      background: white;
+      box-shadow: none !important; }
+    #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+      color: #485094; }
+    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+      color: black; } }
+  @media screen and (max-width: 768px) {
+    #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+      padding: 0 1.5em;
+      overflow: visible; } }
+  #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+    color: white; }
+  #toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+    text-transform: uppercase; }
+  #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+    box-shadow: none;
+    color: white; }
+
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%; }
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    background-color: #f7f7f7; } }
+
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white; } }
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #1661AD;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+    #toggle span {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%); } }
+
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none; } }
+
+@media print {
+  #toggle {
+    display: none; } }
+
+#myBtn {
+  font-family: "Source Code Pro",monospace;
+  font-variant-ligatures: none;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #1f8ca0;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+  text-transform: uppercase; }
+  #myBtn:hover {
+    opacity: 1; }
+  @media print {
+    #myBtn {
+      display: none; } }
+  #myBtn a.anchorjs-link:hover {
+    background: none;
+    color: #485094;
+    box-shadow: none; }
+
+/*
+    2. Responsive navigation layout
+*/
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 360px; }
+  .rule.toc {
+    display: none; }
+  h1.toc-contents {
+    margin-top: 1em; }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0; } }
+
+div.figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+  div.figure .FigureTitle, div.figure .figure-title {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  div.figure > img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    height: auto; }
+
+/*
+    Document types + stages
+*/
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102; }
+  .document-type-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-type-band {
+      display: none; } }
+  .document-type-band .document-type {
+    top: 20px; }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+  .document-stage-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 300;
+    height: 160px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-stage-band {
+      display: none; } }
+#governance-band p.document-type {
+  height: 230px !important; }
+
+p.document-stage {
+  font-weight: 300;
+  height: 160px; }
+
+#standard-band p {
+  height: 270px; }
+
+#proposal-band p {
+  height: 150px; }
+
+#standard-band,
+#published-band {
+  background-color: #9ABD48; }
+
+#standard,
+#published {
+  border-bottom: solid 3px #9ABD48; }
+
+#governance,
+#policy-and-procedures {
+  border-bottom: solid 3px #750697; }
+
+#governance-band,
+#policy-and-procedures-band {
+  background-color: #750697; }
+
+#guide {
+  border-bottom: solid 3px #48a0e7; }
+
+#guide-band {
+  background-color: #48a0e7; }
+
+.coverpage-maturity {
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
+
+#working-draft,
+#proposal {
+  border-bottom: solid 3px #F7803C; }
+
+#working-draft-band,
+#proposal-band {
+  background-color: #F7803C; }
+
+#committee-draft {
+  border-bottom: solid 3px #fd06fd; }
+
+#committee-draft-band {
+  background-color: #fd06fd; }
+
+#draft-standard {
+  border-bottom: solid 3px #fdf906; }
+
+#draft-standard-band {
+  background-color: #fdf906; }
+
+#standard {
+  border-bottom: solid 3px #9ABD48; }
+
+#standard-band {
+  background-color: #9ABD48; }
+
+#obsolete {
+  border-bottom: solid 3px #7e0d13; }
+
+#obsolete-band {
+  background-color: #7e0d13; }
+
+/*
+    3. TYPOGRAPHY
+*/
+/*
+    3.1 Titles
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Source Sans Pro",sans-serif;
+  color: #1661AD;
+  font-weight: 300;
+  margin-top: 1.6em;
+  margin-bottom: 0.3em; }
+
+h1, .h1 {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin-top: 2em; }
+
+h1#content, #content.h1 {
+  margin-top: 2em; }
+
+h2, .h2 {
+  margin-top: 1.3em;
+  font-size: 1.3em;
+  font-weight: 400; }
+
+h3, .h3 {
+  margin-top: 1.1em;
+  font-size: 1.1em;
+  font-weight: 100; }
+
+.TermNum {
+  font-weight: 100; }
+
+.TermNum, .Terms, .AltTerms {
+  color: #1661AD; }
+
+h2.TermNum {
+  margin-bottom: 0; }
+
+p.Terms {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin: 0; }
+
+p.AltTerms {
+  /*
+  font-style: italic;
+    */
+  font-size: 1.1em;
+  margin: 0; }
+
+.contact-info a:hover {
+  color: #485094;
+  text-decoration: underline;
+  background: none;
+  box-shadow: 0 0 0 0; }
+
+/*
+  3.2 Links
+*/
+a, a:visited {
+  text-decoration: none;
+  color: #485094; }
+
+a:hover {
+  color: white;
+  background: #1661AD;
+  box-shadow: 3px 0 0 #1661AD, -3px 0 0 #1661AD; }
+
+::selection,
+::-moz-selection {
+  background: #1661AD;
+  color: white; }
+
+/*
+    3.3 Lists
+*/
+ul,
+ol {
+  margin-left: 1.2em; }
+
+ul li {
+  list-style: none; }
+
+ul > li:before {
+  content: "\2014";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.2em; }
+
+ul > li p:first-child {
+  display: inline; }
+
+ul > li:first-child {
+  margin-top: 1em; }
+
+ul ul > li:first-child {
+  margin-top: 0; }
+
+ol ul > li:first-child {
+  margin-top: 0; }
+
+#toc-list ul {
+  margin-bottom: 0.25em; }
+
+#toc-list li {
+  list-style-type: none; }
+
+#toc li:before {
+  content: " ";
+  display: none; }
+
+/*
+    3.4 Rules
+*/
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #0e1a85;
+  margin: 2em 0; }
+
+/*
+    3.5 Bibliograhy
+*/
+p.Biblio,
+p.NormRef {
+  margin-top: 1em;
+  margin-left: 2em; }
+
+/*
+    3.6 Source Code + figures
+*/
+.figure,
+pre,
+.pseudocode {
+  background-color: #f7f7f7;
+  font-size: 12px;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+  .figure .SourceTitle,
+  pre .SourceTitle,
+  .pseudocode .SourceTitle {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+
+pre {
+  font-family: "Source Code Pro",monospace;
+  font-variant-ligatures: none; }
+
+.AdmonitionTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.FigureTitle,
+.SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+/*
+    3.7 Notes
+*/
+.Note {
+  background-color: #fff495;
+  color: #47430c;
+  padding: 1.2em;
+  margin: 1em 0 1em 0; }
+  .Note p {
+    margin: 0; }
+
+.Admonition {
+  background-color: #ffcccc;
+  color: #47430c;
+  padding: 1.2em;
+  margin: 1em 0 1em 0; }
+  .Admonition p {
+    margin: 0; }
+
+/*
+    3.8 Examples
+*/
+.example {
+  background-color: #e1eef1;
+  padding: 1.2em;
+  margin: 2em 0 1em 0;
+  text-align: left;
+  color: #424242;
+  padding-left: 2.7em; }
+  .example p {
+    margin: 0; }
+  .example .example-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: -1.5em; }
+  .example .example-title {
+    margin-top: 0; }
+  .example pre,
+  .example .pseudocode {
+    background: none; }
+
+/*
+    3.9 Tables
+*/
+table {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em; }
+  table, table th, table td {
+    border: 1px solid black;
+    font-size: 0.95em; }
+  table th, table td {
+    padding: 1em; }
+  table td.header {
+    font-weigth: 400; }
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400; }
+
+/*
+  3.10 Footnotes
+*/
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em; }
+
+/*
+    3.11 Blockquotes
+*/
+.Quote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*
+    3.12 Formulas
+*/
+.formula {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+/*
+    3.13 Contact Info
+*/
+.contact-info {
+  padding: 2em;
+  margin-top: 5em;
+  width: 250px;
+  text-align: left;
+  border: #1661AD solid 2px;
+  color: #1661AD !important;
+  border-radius: 25px; }
+
+.contact-info a,
+.contact-info a:hover {
+  color: #1661AD; }
+
+.contact-info p,
+.contact-info a {
+  font-family: "Source Code Pro",monospace;
+  font-variant-ligatures: none;
+  font-weight: 400; }
+
+.contact-info .name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0; }
+
+.contact-info .address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0; }
+
+/*
+    Keywords
+*/
+span.keyword {
+  font-weight: 600; }
+
+/*
+    Paragraphs
+*/
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+h2 p, .h2 p {
+  display: inline; }
+
+/*
+    4.0 Page header
+*/
+/*
+    4.1 Top Logo
+*/
+.icon-svg {
+  width: 100%;
+  color: #5ecf86; }
+
+.wrapper-top {
+  background: linear-gradient(200deg, #0f365e, #1661AD);
+  color: #ffffff;
+  padding: 2em 0;
+  width: 100%; }
+
+.wrapper-top-bottom {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #1661AD;
+  border-right: 100px solid transparent;
+  position: absolute; }
+
+.doc-number {
+  font-size: 0.5em;
+  font-family: "Source Sans Pro",sans-serif; }
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Source Sans Pro",sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-transform: uppercase; }
+
+.WordSection11 {
+  padding: 0 2em 0 3em; }
+
+.info-section {
+  padding: 0 2em 0 5em; }
+
+.prefatory-section {
+  padding: 0 3em 0 6em; }
+
+.zzSTDTitle1,
+.MsoCommentText {
+  display: none; }
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em; }
+
+.coverpage-logo span,
+.coverpage-tc-name span {
+  font-family: "Source Sans Pro",sans-serif;
+  text-transform: none;
+  font-weight: 300; }
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0; }
+
+/*
+    4.2 Document Identity
+*/
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em; }
+
+.coverpage-title .title-second {
+  display: none; }
+
+.coverpage-stage-block {
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase; }
+
+/*
+    4.3 Draft Warning
+*/
+.coverpage-warning {
+  border: #f36f36 solid 2px;
+  color: #f36f36 !important;
+  margin: 1em 2em;
+  color: #485094;
+  padding: 2em 1em 1em 1em;
+  border-radius: 25px; }
+
+.coverpage-warning .title {
+  font-family: "Source Sans Pro",sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.2em; }
+
+/*
+    4.4 Copyright
+*/
+.boilerplate-copyright {
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: left; }
+
+/*  .copyright .name, .copyright .address {color: #485094;} */
+/*
+    5.0 Other styles
+*/
+/*
+To top button
+*/
+@page {
+  margin: 2cm 1cm; }
+
+@media print {
+  .document-info,
+  nav,
+  .copyright {
+    page-break-before: always; }
+  nav {
+    page-break-after: always; }
+  h1,
+  h2,
+  h3,
+  h4,
+  .h1, .h2, .h3, .h4 {
+    page-break-after: avoid;
+    margin-top: 1.2em; }
+  .note,
+  .figure,
+  pre,
+  .pseudocode,
+  table {
+    page-break-inside: avoid; }
+  .info-section {
+    display: none; }
+  .coverpage {
+    height: 23cm; }
+  .wrapper-top {
+    top: 0;
+    padding-top: 4cm;
+    padding-bottom: 4cm; }
+  .wrapper-top-bottom {
+    margin-top: -5px; }
+  button#myBtn {
+    background-color: white; }
+  .container {
+    padding-left: 0; }
+  h1.content {
+    margin-top: 2em;
+    line-height: 2.5em; }
+  h1, .h1 {
+    font-size: 1.5em;
+    line-height: 1.5; }
+  h2, .h2 {
+    font-size: 1.2em; }
+  h3, .h3 {
+    font-size: 1em; }
+  .Note {
+    background-color: #fff495;
+    color: #47430c;
+    padding: 5px;
+    margin: 2em 0 1em 0; }
+  .Note p {
+    padding: 0 5px 0 5px; }
+  .Admonition {
+    background-color: #ffcccc;
+    color: #47430c;
+    padding: 5px;
+    margin: 2em 0 1em 0; }
+  .Admonition p {
+    padding: 0 5px 0 5px; }
+  .wrapper-top-bottom {
+    display: none; } }
+
+-->
+</style><title>Comments on the "Publication Identifier Syntax for NIST Technical Series Publications"</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" /> 
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,600;1,300;1,600&amp;display=swap" rel="stylesheet" />
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+</head>
+  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
+    <div class="title-section"><div class="document-stage-band" id="published-band">
+  <p class="document-stage">Published</p>
+</div>
+
+<div class="document-type-band" id="report-band">
+  <p class="document-type">Ribose Report</p>
+</div>
+
+
+
+<div id="toggle"> <span>&#x2022;</span> </div>
+
+<header>
+
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+      <div class="coverpage-doc-identity">
+        <div class="doc-number">
+          <span class="docnumber">Rept 11023</span>
+          <span class="docyear"></span>
+        </div>
+
+        <div class="coverpage-title">
+          <span class="title-first">Comments on the "Publication Identifier Syntax for NIST Technical Series Publications"</span>
+          <!--<span class="title-second"></span>-->
+        </div>
+      </div>
+
+      <div class="coverpage-logo">
+        <span>Ribose Group Inc. 2021</span>
+      </div>
+
+      <div class="coverpage-tc-name">
+        <span>Standardization</span>
+      </div>
+    </div>
+
+    <div class="wrapper-top-bottom"></div>
+
+    <div class="WordSection11">
+      <div class="coverpage-stage-block">
+        <span class="coverpage-stage" id="report">Ribose Report</span>
+      </div>
+
+      <div class="coverpage-stage-block">
+        <p><span class="coverpage-maturity" id="published">Published 2021-12-22</span></p>
+        
+        <p><span class="coverpage-maturity">Classification: unrestricted</span></p>
+        
+        
+        <p><span class="coverpage-maturity">Recipient: techpubs@nist.gov</span></p>
+        
+      </div>
+
+      
+
+      
+
+      <div class="info-section">
+        <div class="copyright">
+          <div class="year">
+            <div class="boilerplate-copyright">
+    <div>
+      <p id="_60e61168-a015-50a7-161b-73a1dd07d4f2"> &#xA9; Ribose Limited 2021</p>
+    </div>
+  </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="boilerplate-feedback">
+    <div>
+      <p id="boilerplate-name" style="text-align:left;">
+        Ribose Limited
+      </p>
+      <p id="boilerplate-address" style="text-align:left;">3rd Floor<br />11-12 St James&#x2019;s Square<br />London SW1Y 4LB<br />United Kingdom<br />
+        <br />
+        <a href="mailto:copyright@ribose.com">copyright@ribose.com</a><br />
+        <a href="https://www.ribose.com">www.ribose.com</a>
+      </p>
+    </div>
+  </div>
+          </div>
+
+          <div class="message">
+            <div class="boilerplate-legal">
+    <div>
+      <p id="_e5bddc52-3d6f-eb43-a55d-8dbffb6dbd0c">All rights reserved. Unless otherwise specified, no part of this
+          publication may be reproduced or utilized otherwise in any form or by any
+          means, electronic or mechanical, including photocopying, or posting on the
+          internet or an intranet, without prior written permission. Permission can
+          be requested from the address below.
+        </p>
+      </div>
+  </div>
+          </div>
+        </div>
+
+        <div class="rule"></div>
+        </div>
+      </div>
+
+
+
+</div></header>
+      
+    </div>
+    <br />
+    <div class="prefatory-section"><nav>
+  <h1 id="content">Contents</h1>
+  <div id="toc"><ul><li class="h1"><a href="#toc0">      Foreword</a></li><li class="h1"><a href="#toc1">      Executive summary</a></li><li class="h1"><a href="#toc2">      1.&#xA0; Scope</a></li><li class="h1"><a href="#toc3">      2.&#xA0; Normative references</a></li><li class="h1"><a href="#toc4">      3.&#xA0; Terms and definitions</a></li><li class="h1"><a href="#toc5">      4.&#xA0; Recommendations</a></li><li class="h2"><a href="#toc6">      4.1.&#xA0; Recommendation 1: Generate machine-readable identifiers</a></li><li class="h2"><a href="#toc7">      4.2.&#xA0; Recommendation 2: Support rendering PubID into long and abbreviated formats</a></li><li class="h2"><a href="#toc8">      4.3.&#xA0; Recommendation 3: Extend PubID coverage to the full NIST Tech Pubs history</a></li><li class="h2"><a href="#toc9">      4.4.&#xA0; Recommendation 4: Support extra part types</a></li><li class="h1"><a href="#toc10">      5.&#xA0; Summary</a></li><li class="h1"><a href="#toc11">      Annex A (informative)  Amended elements of the PubID</a></li><li class="h2"><a href="#toc12">      A.1.&#xA0; General</a></li><li class="h2"><a href="#toc13">      A.2.&#xA0; Publisher</a></li><li class="h2"><a href="#toc14">      A.3.&#xA0; Series</a></li><li class="h2"><a href="#toc15">      A.4.&#xA0; Stage</a></li><li class="h2"><a href="#toc16">      A.5.&#xA0; Report number</a></li><li class="h2"><a href="#toc17">      A.6.&#xA0; Part</a></li><li class="h2"><a href="#toc18">      A.7.&#xA0; Edition</a></li><li class="h2"><a href="#toc19">      A.8.&#xA0; Translation</a></li><li class="h2"><a href="#toc20">      A.9.&#xA0; Update</a></li><li class="h1"><a href="#toc21">      Annex B (informative)  PubID patterns</a></li><li class="h2"><a href="#toc22">      B.1.&#xA0; Presentation</a></li><li class="h2"><a href="#toc23">      B.2.&#xA0; Full PubID</a></li><li class="h2"><a href="#toc24">      B.3.&#xA0; Abbreviated PubID</a></li><li class="h2"><a href="#toc25">      B.4.&#xA0; Short PubID</a></li><li class="h2"><a href="#toc26">      B.5.&#xA0; Machine-readable PubID</a></li><li class="h1"><a href="#toc27">      Bibliography</a></li></ul></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+
+      
+    </div>
+    <br />
+    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <div class="authority">
+  
+
+  
+  
+</div>
+      <br />
+      <div id="_b985aadc-a171-8494-5d6b-213755c31bc9">
+        <h1 class="ForewordTitle" id="toc0">Foreword</h1>
+        <p id="_a32f169e-56d4-46d2-1bbe-464af21bbd7c">Ribose is an award-winning global developer of asymmetric security and standardization technologies trusted by industries with heightened cybersecurity needs. Ribose is a Deloitte Technology FAST 20 and Red Herring Top 100 Global company, and recipient of the CSA APAC Enterprise Award and multiple Stevie&#xAE; Awards for its innovations.</p>
+        <p id="_f64ee422-aa80-d192-46bf-13fde11dd637">Organizations that depend on Ribose solutions include Mozilla, the International Telecommunications Union, the International Standards Organization, the Internet Engineering Task Force, the British Standards Institution, the Ministry of Defense (UK) and other government agencies.</p>
+        <p id="_03e0a9e8-01f7-5d72-49d9-713a001f1b78">Ribose is the only cloud service provider (CSP) triple-assured by the Cloud Security Alliance, the first CSP to receive BSI&#x2019;s Kitemark for Secure Digital Transactions, and the first to achieve certification to the highest security tiers in NIST CSF and MTCS. It is also certified to ISO 9001, ISO 14001, ISO/IEC 20000, ISO 22301, ISO/IEC 27001, ISO/IEC 27017, ISO/IEC 27018, ISO/IEC 27701, ISO 45001 and ISO 50001.</p>
+      </div>
+      <br />
+      <div class="Section3" id="exec-sum">
+        <h1 class="IntroTitle" id="toc1">Executive summary</h1>
+        <p id="_e616063e-6463-ef94-5ff2-23c383c33957">This document provides comments in response to the &#x201C;Publication Identifier Syntax for NIST Technical Series Publications&#x201D; document issued August 2021.</p>
+        <p id="_5bcf5c1f-7076-648e-3610-fa70c8442007">Ribose is a technology leader committed to open-source in the publication of machine-readable standards and normative content through its work with international, national and industry standards development organizations.</p>
+        <p id="_8e1dd320-1de4-2a9d-b25e-ff302e3e6147">We laud the innovative and structured approach of the PubID syntax, and have implemented the NIST PubID scheme in our open-source Relaton bibliographic management software. The NIST version of Ribose&#x2019;s Metanorma open-source publication toolchain now supports citations using PubID.</p>
+        <p id="_f0d6d98c-6406-4fb0-6b75-4adaa6fdd92c">We have back-tested the implementation of the NIST PubID scheme against the full NIST Library catalog of 19,283 NIST Tech Publications published between 1901 to 2021, dating back to those published by NIST&#x2019;s predecessor NBS, the National Bureau of Standards.</p>
+        <p id="_1e957043-a8b8-4762-2478-1afd019ce799">A list of recommended improvements are detailed in the document, including:</p>
+        <ol type="1" id="_4fc441c4-58f1-6a4b-efc8-b4c02689378f"><li><p id="_a1c48abb-462d-a482-39f4-38d03887e574">Extend the functionality of the PubID scheme such that it generates a
+corresponding, deterministic identifier that is easily machine-parseable for
+machine consumption, for purposes such as DOI;</p>
+</li>
+<li><p id="_a8cc7e96-2329-c8eb-b4e5-de0f9a0bf219">Extend PubID rendering to support readable full-form identifiers and
+abbreviated identifiers currently used within NIST Tech Pubs, in addition
+to the current short-form PubID described in the document;</p>
+</li>
+<li><p id="_d304c7bf-4628-ea24-a9fb-af59248274fe">Extend PubID coverage to the full NIST Tech Pubs history, including to
+documents published by the predecessor of NIST&#x2009;&#x2014;&#x2009;NBS;</p>
+</li>
+<li><p id="_9e493ed5-f057-086f-f7eb-06a360d9be7b">Support additional &#x201C;part types&#x201D; values including insert, addendum and errata
+that exist in the NIST Tech Pubs history.</p>
+</li>
+</ol>
+        <p id="_e7951e22-d84b-6562-ff1e-495c880a758b">We strongly support this work, and welcome any questions or potential forms of collaboration given that it is one where we have an involved history with.</p>
+      </div>
+      <p class="zzSTDTitle1">Comments on the "Publication Identifier Syntax for NIST Technical Series Publications"</p>
+      <div id="_scope">
+        <h1 id="toc2">1.&#xA0; Scope</h1>
+        <p id="_4db35467-868e-a387-31ed-8ec6e0ce2ac7">This document provides comments and proposals in response to the &#x201C;Publication Identifier Syntax for NIST Technical Series Publications&#x201D; document issued August 2021.</p>
+      </div>
+      <div><h1 id="toc3">2.&#xA0; Normative references</h1>
+<p id="_35cdd9ac-0cd5-e817-e439-f1e19aa59a49">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+
+<p id="PUBID" class="NormRef">NIST PubID, NIST. <i>Publication Identifier Syntax for NIST Technical Series Publications</i>. 2021-08.</p>
+<p id="ISO_690" class="NormRef">ISO 690:2021, <i>Information and documentation&#x2009;&#x2014;&#x2009;Guidelines for bibliographic references and citations to information resources</i></p>
+</div>
+      <div id="_terms_and_definitions"><h1 id="toc4">3.&#xA0; Terms and definitions</h1><p id="_bed2a23f-1fb7-b3e6-9208-c082ecacf8bd">For the purposes of this document,
+    the following terms and definitions apply.</p><p class="Terms" style="text-align:left;" id="term-document-identifier"><strong>3.1.</strong>&#xA0;<b>document identifier</b></p>
+<p id="_d30a78fe-2b19-5eae-25e5-d976c75da03f">string of text that uniquely identifies a document</p>
+ <p class="Terms" style="text-align:left;" id="term-metadata-enhanced-document-identifier"><strong>3.2.</strong>&#xA0;<b>metadata-enhanced document identifier</b></p>
+<p id="_87dcd1cf-a086-8b80-1422-4df73b452735">unique <i>document identifier</i> [term defined in <a href="#term-document-identifier">3.1</a>] that embeds metadata information about the document itself</p>
+
+
+ <div id="_666ae1d9-70d0-2fe0-3830-5e775fa4f2a4" class="example"><p class="example-title">EXAMPLE</p><p id="_37e06ca9-7bdf-54b3-7f5a-15acff5de2f7">A NIST PubID, such as &#x201C;NIST SP (IPD) 800-53r5&#x201D; embeds the document series,
+document stage and revision information.</p>
+</div><p class="Terms" style="text-align:left;" id="term-machine-readable-data-structure"><strong>3.3.</strong>&#xA0;<b>machine-readable data structure</b></p>
+<p id="_01660043-2123-a325-5fa1-ea9d4dec13bd">data structure suited for machine interpretation where its individual data elements are easily discernable</p>
+ </div>
+      <div id="_recommendations">
+        <h1 id="toc5">4.&#xA0; Recommendations</h1>
+        <div id="_recommendation_1_generate_machine_readable_identifiers"><h2 id="toc6">4.1.&#xA0; Recommendation 1: Generate machine-readable identifiers</h2>
+
+<div id="_general"><h3>4.1.1.&#xA0; General</h3>
+
+<p id="_2965ff3c-f71b-61ae-63df-b961098f45ab">Machines are increasingly used to parse and correlate content given in digital formats, and that applies to document identifiers as well.</p>
+
+<p id="_e36d81b9-1eaa-58f6-a95a-6602651e1535">Machine-readable, or format restricted document identifiers are immensely useful, for example, the naming of DOI identifiers and encoding within databases.</p>
+
+<p id="_61134ad0-a99d-a20c-3217-c76d4cc44b76">The perpetual enemy of machine-readability is ambiguity. With the PubID data elements, a machine-readable identifier will provide a machine a &#x201C;single-step&#x201D; understanding where individual data elements of the identifier can be parsed and understood with minimal effort.</p>
+
+<p id="_3583fe98-8e3c-6121-c3e9-d922ab50693c">The last bullet of the last bullet in <a href="#PUBID">NIST PubID,  Clause 3.1</a> demonstrates consideration of characters allowed in DOI suffixes, and hints that the PubID scheme complies with the requirements of a DOI suffix, by stating that these characters are allowed: <tt>-._,()/</tt>.</p>
+
+<p id="_e4b82a8f-39e8-a3cd-f972-9957c90d990d">However, DOIs are to be used within URLs. The standard for URLs, <a href="#RFC3986">RFC 3986,  Clause 2.3</a> clearly states that only the following characters do not get &#x201C;percent-encoded&#x201D;:</p>
+
+<div class="Quote" id="_6743667a-8452-7d7e-bde0-02d6f67dad99"><p id="_afaebbe6-de9c-ac8d-2fd4-43b1058210be">For consistency, percent-encoded octets in the ranges of ALPHA (%41-%5A and %61-%7A), DIGIT (%30-%39), hyphen (%2D), period (%2E), underscore (%5F), or tilde (%7E) should not be created by URI producers and, when found in a URI, should be decoded to their corresponding unreserved characters by URI normalizers.</p>
+</div>
+
+<p id="_f84c98f3-399b-b426-96ef-d7681a0191c9">This means that these characters: comma <tt>,</tt>, open and close parentheses <tt>()</tt>, should be percent-encoded, and hence causing an unnecessary rewrite of the URL for the user.</p>
+</div>
+
+<div id="_proposal"><h3>4.1.2.&#xA0; Proposal</h3>
+
+<div id="figure1" class="figure">
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:lucid="lucid" width="995.43" height="660">
+  <g transform="translate(-80 -140)" lucid:page-tab-id="0_0">
+    <path d="M0 0h1870.87v1322.83H0z" fill="#fff"></path>
+    <path d="M460 166c0-3.3 2.7-6 6-6h228c3.3 0 6 2.7 6 6v94c-40.08-16.7-65.04-16.7-80.16-16.7-24 0-55.92 16.7-79.92 16.7-14.88 0-40.08 0-79.92-16.7z" stroke="#0c7cba" stroke-width="3" fill="#fff"></path>
+    <use xlink:href="#a" transform="matrix(1,0,0,1,465,165) translate(63.24074074074074 40.90277777777778)"></use>
+    <use xlink:href="#b" transform="matrix(1,0,0,1,465,165) translate(122.43827160493828 40.90277777777778)"></use>
+    <path d="M440 329.64c0-3.32 2.7-6 6-6h268c3.3 0 6 2.68 6 6v248c0 3.3-2.7 6-6 6H446c-3.3 0-6-2.7-6-6z" stroke="#0c7cba" stroke-width="3" fill="#fff"></path>
+    <use xlink:href="#c" transform="matrix(1,0,0,1,445,328.6363636363636) translate(35.53333333333333 247.37866666666665)"></use>
+    <use xlink:href="#d" transform="matrix(1,0,0,1,445,328.6363636363636) translate(100.65925925925926 247.37866666666665)"></use>
+    <use xlink:href="#e" transform="matrix(1,0,0,1,445,328.6363636363636) translate(148.06666666666666 247.37866666666665)"></use>
+    <path d="M480 349.64c0-3.32 2.7-6 6-6h91.64c3.3 0 6 2.68 6 6v91.63c0 3.32-2.7 6-6 6H486c-3.3 0-6-2.68-6-6z" stroke="#0c7cba" stroke-width="3" fill="#fff"></path>
+    <path d="M500.6 476.83c-1.84 2.75-.64 5 2.67 5h126.18c3.32 0 4.5-2.25 2.68-5l-62.44-93.66c-1.85-2.75-4.83-2.75-6.66 0z" stroke="#0c7cba" stroke-width="3" fill="#fff"></path>
+    <path d="M670 464.55c0 28.6-23.2 51.8-51.82 51.8s-51.82-23.2-51.82-51.8c0-28.62 23.2-51.82 51.82-51.82S670 435.93 670 464.55z" stroke="#0c7cba" stroke-width="3" fill="#fff"></path>
+    <path d="M580 271.46v32.17" stroke="#0c7cba" stroke-width="2" fill="none"></path>
+    <path d="M580 256.2l4.64 14.26h-9.28zM580 318.9l-4.64-14.27h9.28z" stroke="#0c7cba" stroke-width="2" fill="#0c7cba"></path>
+    <path d="M815.43 409.64c0-3.32 2.7-6 6-6h228c3.32 0 6 2.68 6 6v94c-40.08-16.7-65.04-16.7-80.16-16.7-24 0-55.92 16.7-79.92 16.7-14.88 0-40.08 0-79.92-16.7z" stroke="#19967d" stroke-width="3" fill="#fff"></path>
+    <use xlink:href="#f" transform="matrix(1,0,0,1,820.4330708661416,408.6363636363636) translate(65.06172839506172 40.90277777777778)"></use>
+    <use xlink:href="#b" transform="matrix(1,0,0,1,820.4330708661416,408.6363636363636) translate(120.61728395061728 40.90277777777778)"></use>
+    <path d="M740 453.64h10.27m10.26 0h2.05m10.27 0h2.05m10.27 0h10.26" stroke="#19967d" stroke-width="2" fill="none"></path>
+    <path d="M724.74 453.64L739 449v9.27zM810.7 453.64l-14.27 4.63V449z" stroke="#19967d" stroke-width="2" fill="#19967d"></path>
+    <path d="M458.5 686c0-3.3 2.7-6 6-6h228c3.3 0 6 2.7 6 6v94c-40.08-16.7-65.04-16.7-80.16-16.7-24 0-55.92 16.7-79.92 16.7-14.88 0-40.08 0-79.92-16.7z" stroke="#19967d" stroke-width="3" fill="#fff"></path>
+    <use xlink:href="#g" transform="matrix(1,0,0,1,463.5,685) translate(30.555555555555557 40.90277777777778)"></use>
+    <use xlink:href="#b" transform="matrix(1,0,0,1,463.5,685) translate(155.12345679012344 40.90277777777778)"></use>
+    <path d="M581.86 603.64v10.44m0 10.43v2.1m0 10.44v2.08m0 10.44V660" stroke="#19967d" stroke-width="2" fill="none"></path>
+    <path d="M581.86 588.37l4.64 14.27h-9.27zM581.86 675.26L577.23 661h9.27z" stroke="#19967d" stroke-width="2" fill="#19967d"></path>
+    <path d="M100 409.64c0-3.32 2.7-6 6-6h228c3.3 0 6 2.68 6 6v94c-40.08-16.7-65.04-16.7-80.16-16.7-24 0-55.92 16.7-79.92 16.7-14.88 0-40.08 0-79.92-16.7z" stroke="#19967d" stroke-width="3" fill="#fff"></path>
+    <use xlink:href="#h" transform="matrix(1,0,0,1,105,408.6363636363636) translate(1.0185185185185333 40.90277777777778)"></use>
+    <use xlink:href="#b" transform="matrix(1,0,0,1,105,408.6363636363636) translate(184.66049382716048 40.90277777777778)"></use>
+    <path d="M360 453.64h11.1m11.12 0h2.22m11.12 0h2.22m11.1 0H420" stroke="#19967d" stroke-width="2" fill="none"></path>
+    <path d="M344.74 453.64L359 449v9.27zM435.26 453.64L421 458.27V449z" stroke="#19967d" stroke-width="2" fill="#19967d"></path>
+    <path d="M100 666c0-3.3 2.7-6 6-6h168c3.3 0 6 2.7 6 6v48c0 3.3-2.7 6-6 6H106c-3.3 0-6-2.7-6-6z" stroke="#0c7cba" stroke-width="3" fill="#fff"></path>
+    <g>
+      <use xlink:href="#i" transform="matrix(1,0,0,1,105,665) translate(25.154320987654323 30.27777777777778)"></use>
+      <use xlink:href="#j" transform="matrix(1,0,0,1,105,665) translate(90.52469135802468 30.27777777777778)"></use>
+    </g>
+    <path d="M100 726c0-3.3 2.7-6 6-6h168c3.3 0 6 2.7 6 6v48c0 3.3-2.7 6-6 6H106c-3.3 0-6-2.7-6-6z" stroke="#19967d" stroke-width="3" fill="#fff"></path>
+    <g>
+      <use xlink:href="#k" transform="matrix(1,0,0,1,105,725) translate(-1.9135802469135683 29.444444444444443)"></use>
+    </g>
+    <defs>
+      <path fill="#333" d="M185-189c-5-48-123-54-124 2 14 75 158 14 163 119 3 78-121 87-175 55-17-10-28-26-33-46l33-7c5 56 141 63 141-1 0-78-155-14-162-118-5-82 145-84 179-34 5 7 8 16 11 25" id="l"></path>
+      <path fill="#333" d="M106-169C34-169 62-67 57 0H25v-261h32l-1 103c12-21 28-36 61-36 89 0 53 116 60 194h-32v-121c2-32-8-49-39-48" id="m"></path>
+      <path fill="#333" d="M100-194c62-1 85 37 85 99 1 63-27 99-86 99S16-35 15-95c0-66 28-99 85-99zM99-20c44 1 53-31 53-75 0-43-8-75-51-75s-53 32-53 75 10 74 51 75" id="n"></path>
+      <path fill="#333" d="M114-163C36-179 61-72 57 0H25l-1-190h30c1 12-1 29 2 39 6-27 23-49 58-41v29" id="o"></path>
+      <path fill="#333" d="M59-47c-2 24 18 29 38 22v24C64 9 27 4 27-40v-127H5v-23h24l9-43h21v43h35v23H59v120" id="p"></path>
+      <g id="a">
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,0,0)" xlink:href="#l"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,14.814814814814813,0)" xlink:href="#m"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,27.160493827160494,0)" xlink:href="#n"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,39.50617283950617,0)" xlink:href="#o"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,46.85185185185185,0)" xlink:href="#p"></use>
+      </g>
+      <path fill="#333" d="M101-234c-31-9-42 10-38 44h38v23H63V0H32v-167H5v-23h27c-7-52 17-82 69-68v24" id="q"></path>
+      <path fill="#333" d="M210-169c-67 3-38 105-44 169h-31v-121c0-29-5-50-35-48C34-165 62-65 56 0H25l-1-190h30c1 10-1 24 2 32 10-44 99-50 107 0 11-21 27-35 58-36 85-2 47 119 55 194h-31v-121c0-29-5-49-35-48" id="r"></path>
+      <g id="b">
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,0,0)" xlink:href="#q"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,6.172839506172839,0)" xlink:href="#n"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,18.51851851851852,0)" xlink:href="#o"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,25.864197530864196,0)" xlink:href="#r"></use>
+      </g>
+      <path d="M30-248c87 1 191-15 191 75 0 78-77 80-158 76V0H30v-248zm33 125c57 0 124 11 124-50 0-59-68-47-124-48v98" id="s"></path>
+      <path d="M84 4C-5 8 30-112 23-190h32v120c0 31 7 50 39 49 72-2 45-101 50-169h31l1 190h-30c-1-10 1-25-2-33-11 22-28 36-60 37" id="t"></path>
+      <path d="M115-194c53 0 69 39 70 98 0 66-23 100-70 100C84 3 66-7 56-30L54 0H23l1-261h32v101c10-23 28-34 59-34zm-8 174c40 0 45-34 45-75 0-40-5-75-45-74-42 0-51 32-51 76 0 43 10 73 51 73" id="u"></path>
+      <path d="M33 0v-248h34V0H33" id="v"></path>
+      <path d="M30-248c118-7 216 8 213 122C240-48 200 0 122 0H30v-248zM63-27c89 8 146-16 146-99s-60-101-146-95v194" id="w"></path>
+      <g id="c">
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,0,0)" xlink:href="#s"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,14.222222222222225,0)" xlink:href="#t"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,26.074074074074076,0)" xlink:href="#u"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,37.92592592592593,0)" xlink:href="#v"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,43.851851851851855,0)" xlink:href="#w"></use>
+      </g>
+      <path d="M85-194c31 0 48 13 60 33l-1-100h32l1 261h-30c-2-10 0-23-3-31C134-8 116 4 85 4 32 4 16-35 15-94c0-66 23-100 70-100zm9 24c-40 0-46 34-46 75 0 40 6 74 45 74 42 0 51-32 51-76 0-42-9-74-50-73" id="x"></path>
+      <path d="M141-36C126-15 110 5 73 4 37 3 15-17 15-53c-1-64 63-63 125-63 3-35-9-54-41-54-24 1-41 7-42 31l-33-3c5-37 33-52 76-52 45 0 72 20 72 64v82c-1 20 7 32 28 27v20c-31 9-61-2-59-35zM48-53c0 20 12 33 32 33 41-3 63-29 60-74-43 2-92-5-92 41" id="y"></path>
+      <path d="M59-47c-2 24 18 29 38 22v24C64 9 27 4 27-40v-127H5v-23h24l9-43h21v43h35v23H59v120" id="z"></path>
+      <g id="d">
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,0,0)" xlink:href="#x"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,11.851851851851853,0)" xlink:href="#y"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,23.703703703703706,0)" xlink:href="#z"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,29.629629629629633,0)" xlink:href="#y"></use>
+      </g>
+      <path d="M100-194c63 0 86 42 84 106H49c0 40 14 67 53 68 26 1 43-12 49-29l28 8c-11 28-37 45-77 45C44 4 14-33 15-96c1-61 26-98 85-98zm52 81c6-60-76-77-97-28-3 7-6 17-6 28h103" id="A"></path>
+      <path d="M24 0v-261h32V0H24" id="B"></path>
+      <path d="M210-169c-67 3-38 105-44 169h-31v-121c0-29-5-50-35-48C34-165 62-65 56 0H25l-1-190h30c1 10-1 24 2 32 10-44 99-50 107 0 11-21 27-35 58-36 85-2 47 119 55 194h-31v-121c0-29-5-49-35-48" id="C"></path>
+      <path d="M117-194c89-4 53 116 60 194h-32v-121c0-31-8-49-39-48C34-167 62-67 57 0H25l-1-190h30c1 10-1 24 2 32 11-22 29-35 61-36" id="D"></path>
+      <path d="M135-143c-3-34-86-38-87 0 15 53 115 12 119 90S17 21 10-45l28-5c4 36 97 45 98 0-10-56-113-15-118-90-4-57 82-63 122-42 12 7 21 19 24 35" id="E"></path>
+      <g id="e">
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,0,0)" xlink:href="#A"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,11.851851851851853,0)" xlink:href="#B"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,16.533333333333335,0)" xlink:href="#A"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,28.385185185185186,0)" xlink:href="#C"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,46.10370370370371,0)" xlink:href="#A"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,57.95555555555556,0)" xlink:href="#D"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,69.80740740740741,0)" xlink:href="#z"></use>
+        <use transform="matrix(0.05925925925925927,0,0,0.05925925925925927,75.73333333333333,0)" xlink:href="#E"></use>
+      </g>
+      <path fill="#333" d="M30 0v-248h33v221h125V0H30" id="F"></path>
+      <path fill="#333" d="M117-194c89-4 53 116 60 194h-32v-121c0-31-8-49-39-48C34-167 62-67 57 0H25l-1-190h30c1 10-1 24 2 32 11-22 29-35 61-36" id="G"></path>
+      <path fill="#333" d="M177-190C167-65 218 103 67 71c-23-6-38-20-44-43l32-5c15 47 100 32 89-28v-30C133-14 115 1 83 1 29 1 15-40 15-95c0-56 16-97 71-98 29-1 48 16 59 35 1-10 0-23 2-32h30zM94-22c36 0 50-32 50-73 0-42-14-75-50-75-39 0-46 34-46 75s6 73 46 73" id="H"></path>
+      <g id="f">
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,0,0)" xlink:href="#F"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,12.345679012345679,0)" xlink:href="#n"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,24.691358024691358,0)" xlink:href="#G"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,37.03703703703704,0)" xlink:href="#H"></use>
+      </g>
+      <path fill="#333" d="M205 0l-28-72H64L36 0H1l101-248h38L239 0h-34zm-38-99l-47-123c-12 45-31 82-46 123h93" id="I"></path>
+      <path fill="#333" d="M115-194c53 0 69 39 70 98 0 66-23 100-70 100C84 3 66-7 56-30L54 0H23l1-261h32v101c10-23 28-34 59-34zm-8 174c40 0 45-34 45-75 0-40-5-75-45-74-42 0-51 32-51 76 0 43 10 73 51 73" id="J"></path>
+      <path fill="#333" d="M100-194c63 0 86 42 84 106H49c0 40 14 67 53 68 26 1 43-12 49-29l28 8c-11 28-37 45-77 45C44 4 14-33 15-96c1-61 26-98 85-98zm52 81c6-60-76-77-97-28-3 7-6 17-6 28h103" id="K"></path>
+      <path fill="#333" d="M108 0H70L1-190h34L89-25l56-165h34" id="L"></path>
+      <path fill="#333" d="M24-231v-30h32v30H24zM24 0v-190h32V0H24" id="M"></path>
+      <path fill="#333" d="M141-36C126-15 110 5 73 4 37 3 15-17 15-53c-1-64 63-63 125-63 3-35-9-54-41-54-24 1-41 7-42 31l-33-3c5-37 33-52 76-52 45 0 72 20 72 64v82c-1 20 7 32 28 27v20c-31 9-61-2-59-35zM48-53c0 20 12 33 32 33 41-3 63-29 60-74-43 2-92-5-92 41" id="N"></path>
+      <path fill="#333" d="M85-194c31 0 48 13 60 33l-1-100h32l1 261h-30c-2-10 0-23-3-31C134-8 116 4 85 4 32 4 16-35 15-94c0-66 23-100 70-100zm9 24c-40 0-46 34-46 75 0 40 6 74 45 74 42 0 51-32 51-76 0-42-9-74-50-73" id="O"></path>
+      <g id="g">
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,0,0)" xlink:href="#I"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,14.814814814814813,0)" xlink:href="#J"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,27.160493827160494,0)" xlink:href="#J"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,39.50617283950617,0)" xlink:href="#o"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,46.85185185185185,0)" xlink:href="#K"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,59.197530864197525,0)" xlink:href="#L"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,70.30864197530863,0)" xlink:href="#M"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,75.18518518518518,0)" xlink:href="#N"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,87.53086419753086,0)" xlink:href="#p"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,93.7037037037037,0)" xlink:href="#K"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,106.04938271604938,0)" xlink:href="#O"></use>
+      </g>
+      <path fill="#333" d="M240 0l2-218c-23 76-54 145-80 218h-23L58-218 59 0H30v-248h44l77 211c21-75 51-140 76-211h43V0h-30" id="P"></path>
+      <path fill="#333" d="M96-169c-40 0-48 33-48 73s9 75 48 75c24 0 41-14 43-38l32 2c-6 37-31 61-74 61-59 0-76-41-82-99-10-93 101-131 147-64 4 7 5 14 7 22l-32 3c-4-21-16-35-41-35" id="Q"></path>
+      <path fill="#333" d="M16-82v-28h88v28H16" id="R"></path>
+      <path fill="#333" d="M24 0v-261h32V0H24" id="S"></path>
+      <g id="h">
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,0,0)" xlink:href="#P"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,18.456790123456788,0)" xlink:href="#N"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,30.80246913580247,0)" xlink:href="#Q"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,41.91358024691358,0)" xlink:href="#m"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,54.25925925925926,0)" xlink:href="#M"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,59.135802469135804,0)" xlink:href="#G"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,71.48148148148148,0)" xlink:href="#K"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,83.82716049382717,0)" xlink:href="#R"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,91.17283950617285,0)" xlink:href="#o"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,98.51851851851853,0)" xlink:href="#K"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,110.86419753086422,0)" xlink:href="#N"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,123.2098765432099,0)" xlink:href="#O"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,135.55555555555557,0)" xlink:href="#N"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,147.90123456790124,0)" xlink:href="#J"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,160.2469135802469,0)" xlink:href="#S"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,165.12345679012344,0)" xlink:href="#K"></use>
+      </g>
+      <path fill="#333" d="M30 0v-248h187v28H63v79h144v27H63v87h162V0H30" id="T"></path>
+      <path fill="#333" d="M141 0L90-78 38 0H4l68-98-65-92h35l48 74 47-74h35l-64 92 68 98h-35" id="U"></path>
+      <path fill="#333" d="M135-143c-3-34-86-38-87 0 15 53 115 12 119 90S17 21 10-45l28-5c4 36 97 45 98 0-10-56-113-15-118-90-4-57 82-63 122-42 12 7 21 19 24 35" id="V"></path>
+      <g id="i">
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,0,0)" xlink:href="#T"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,14.814814814814813,0)" xlink:href="#U"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,25.925925925925924,0)" xlink:href="#M"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,30.80246913580247,0)" xlink:href="#V"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,41.91358024691358,0)" xlink:href="#p"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,48.086419753086425,0)" xlink:href="#V"></use>
+      </g>
+      <path fill="#333" d="M179-190L93 31C79 59 56 82 12 73V49c39 6 53-20 64-50L1-190h34L92-34l54-156h33" id="W"></path>
+      <g id="j">
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,0,0)" xlink:href="#p"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,6.172839506172839,0)" xlink:href="#n"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,18.51851851851852,0)" xlink:href="#O"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,30.864197530864196,0)" xlink:href="#N"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,43.20987654320987,0)" xlink:href="#W"></use>
+      </g>
+      <path fill="#333" d="M233-177c-1 41-23 64-60 70L243 0h-38l-65-103H63V0H30v-248c88 3 205-21 203 71zM63-129c60-2 137 13 137-47 0-61-80-42-137-45v92" id="X"></path>
+      <g id="k">
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,0,0)" xlink:href="#X"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,15.987654320987653,0)" xlink:href="#K"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,28.333333333333332,0)" xlink:href="#Q"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,39.44444444444444,0)" xlink:href="#n"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,51.79012345679012,0)" xlink:href="#r"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,70.24691358024691,0)" xlink:href="#K"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,82.5925925925926,0)" xlink:href="#r"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,101.04938271604938,0)" xlink:href="#G"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,113.39506172839506,0)" xlink:href="#O"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,125.74074074074075,0)" xlink:href="#N"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,138.08641975308643,0)" xlink:href="#p"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,144.25925925925927,0)" xlink:href="#M"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,149.1358024691358,0)" xlink:href="#n"></use>
+        <use transform="matrix(0.06172839506172839,0,0,0.06172839506172839,161.48148148148147,0)" xlink:href="#G"></use>
+      </g>
+    </defs>
+  </g>
+</svg><p class="FigureTitle" style="text-align:center;">Figure 1&#xA0;&#x2014; PubID core data elements and its rendered outputs</p></div>
+
+<p id="_f2a6bcca-533f-247d-c4f2-43b2c51ce0ee"><a href="#figure1">Figure 1</a> shows how the PubID data elements, by providing a machine-readable data structure, enables a stable core for these various output formats to be generated.</p>
+
+<p id="_0329867d-5afb-363c-403e-1c23118b856b">We propose extending the functionality of the PubID scheme such that it generates a corresponding, deterministic identifier that is easily machine-parseable for machine consumption, for purposes such as DOI, where it only utilizes the ASCII characters in the set of <tt>ALPHA</tt>, <tt>DIGIT</tt>, <tt>hyphen</tt> and <tt>period</tt>.</p>
+
+<p id="_bbc0ed47-d4b9-4ce4-5c45-61becad15819">In particular, the machine-readable PubID (&#x201C;MRID&#x201D;) utilizes periods instead of spaces as element delimiters.</p>
+
+<p id="_61577562-09ce-3815-ead7-dbc6f79c4aa5">The proposed scheme, by design, is meant to be very similar to existing assignments of DOI to NIST Tech Pubs.</p>
+
+<p id="_677c1f47-a311-567d-c6d5-114ae6faee1c">The scheme is presented in <a href="#patterns-mr">Annex B.5</a>.</p>
+</div>
+</div>
+        <div id="_recommendation_2_support_rendering_pubid_into_long_and_abbreviated_formats"><h2 id="toc7">4.2.&#xA0; Recommendation 2: Support rendering PubID into long and abbreviated formats</h2>
+
+<div id="_background"><h3>4.2.1.&#xA0; Background</h3>
+
+<p id="_c06ad1ed-5a2f-d83c-66ba-fdead2413fbd">The NIST PubID scheme (<a href="#PUBID">NIST PubID</a>) defines a metadata-enhanced document identifier scheme that allows generation of a unique reference using a set of defined data elements.</p>
+
+<p id="_cd001871-df8e-2df8-640d-154be6b72b38">A traditional NIST Tech Pub practice, especially in CSRC publications, is to provide the following variant forms of document identifiers within the document itself:</p>
+
+<ul id="_10b5841a-c67b-23bb-74ab-2401774b71b8"><li><p id="_a8cf984d-ca71-2af3-071a-9278e837b0ef">Full form, used in the title and the bibliography for citations</p>
+<div id="_b931542e-d5b1-6c6a-9f3b-5e93248b0e02" class="example"><p class="example-title">EXAMPLE  1</p><p id="_f64105e4-d187-1f1e-1037-a0f70d17d881">&#x201C;National Institute of Standards and Technology Special Publication 800-27, Revision A&#x201D;</p>
+</div>
+</li>
+<li><p id="_fcefb923-4625-a541-9f21-55ef46fd05c8">Abbreviated form, used in the &#x201C;Authority&#x201D; section</p>
+<div id="_417f3d5e-2ff5-dde9-fad5-26ba0cd9db6c" class="example"><p class="example-title">EXAMPLE  2</p><p id="_2bb9c801-e1d8-758d-b5dd-846c485acfae">&#x201C;Natl. Inst. Stand. Technol. Spec. Publ. 800-57 Part 1, Revision 4&#x201D;</p>
+</div>
+</li>
+<li><p id="_56fe49bd-383f-cc5c-463f-687a80250473">Short form, used for inline citations</p>
+<div id="_53e3a227-a5af-8b6e-2f3a-4dac5521b497" class="example"><p class="example-title">EXAMPLE  3</p><p id="_f91d3ef0-13c1-dd6d-cdeb-159bdae9a273">&#x201C;In Section 3.2 of SP 800-187&#x2026;&#x200B;&#x201D;</p>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="_proposal_2"><h3>4.2.2.&#xA0; Proposal</h3>
+
+<p id="_3cbdd434-b011-911e-a2cd-6c780e1426e2">NIST PubID today provides an identifier that can be used as a short form, given the compactness of its syntax.</p>
+
+<p id="_c68cbb34-a36b-94f2-857e-ae683f87c9c8">As the &#x201C;full form&#x201D; and &#x201C;abbreviated form&#x201D; identifiers already exist within a document, and that the PubID data elements already provide sufficient information to generate such output, we recommend to allow the generation of the &#x201C;full form&#x201D; and &#x201C;abbreviated form&#x201D; identifiers as well.</p>
+
+<p id="_69549645-1219-d838-67e3-a8f6331d90ba">This change can be enacted by creating &#x201C;full form&#x201D; and &#x201C;abbreviated form&#x201D; generation templates&#x2009;&#x2014;&#x2009;extend every data element to also provide their &#x201C;full form&#x201D; and &#x201C;abbreviated form&#x201D; representation.</p>
+
+<p id="_02d22521-f99d-0113-4a55-fdfce7acf1bf">The proposed list of data elements (with alternative form representations) is provided in <a href="#annexa">Annex A</a>.</p>
+</div>
+</div>
+        <div id="_recommendation_3_extend_pubid_coverage_to_the_full_nist_tech_pubs_history"><h2 id="toc8">4.3.&#xA0; Recommendation 3: Extend PubID coverage to the full NIST Tech Pubs history</h2>
+
+<div id="_background_2"><h3>4.3.1.&#xA0; Background</h3>
+
+<p id="_242e8fc6-9b9b-6dbe-e325-c631e454df5f">The NIST PubID scheme (<a href="#PUBID">NIST PubID</a>) defines a metadata-enhanced document identifier scheme that allows generation of a unique reference to a NIST Tech Pub document without ambiguity.</p>
+
+<p id="_93097eda-d301-8829-7e20-8a2167ee48f3">There are at least two major &#x201C;pattern series&#x201D; of identifiers before the introduction of PubID due to historical reasons:</p>
+
+<ul id="_88a20695-3647-24ff-328f-9df5c08b21c7"><li><p id="_cef6410c-9b9d-228f-6931-456033cbb600">NIST publications produced prior to the PubID scheme (1988-)</p>
+</li>
+<li><p id="_c35150c2-2ba1-d6bc-2f65-e4b25275b833">NBS publications, produced under the National Bureau of Standards (the
+previous name of NIST, 1901 to 1988)</p>
+</li>
+</ul>
+
+<p id="_60039225-c225-d598-7487-9a9cd7b7961b">Ribose has implemented the PubID scheme in its Relaton bibliographic software, allowing for the lossless translation of an existing NIST Tech Pub document identifier into (and from) a NIST PubID.<div id="_01653034-459f-d9c0-b5f5-a68fb28af448" class="Note"><p><span class="note_label">NOTE  1</span>&#xA0; Relaton is an open-source toolchain developed by Ribose for the publication,
+retrieval and citation of information resources. It adopts an internal data
+model from <a href="#ISO_690">ISO 690:2021</a> which allows a machine-readable citation to be built
+from a defined set of data elements. The Relaton format is used to serve
+bibliographic data from the CalConnect Standards Registry,
+the IETF BibXML service, and from the NIST CSRC Metanorma endpoint.</p></div></p>
+
+
+
+<p id="_0040b662-2f23-3ba1-1674-9c616b99b62e">The open-source Relaton web service routinely imports two datasets from NIST in order to facilitate citations for NIST authors, including:</p>
+
+<ol type="1" id="_301255f3-652f-1c23-633c-cbe1d3e4c2b8"><li><p id="_6a271a74-f032-c4e4-ddc7-971bb64f67cc">the NIST CSRC Metanorma endpoint, which serves CSRC publications;</p>
+</li>
+<li><p id="_4a18551c-f95b-9f32-5edb-1707c858cf78">the NIST Library&#x2019;s Tech Pubs GitHub repository, which serves an export of
+CrossRef bibliographic data for NIST Tech Pubs, curated by the NIST Library.</p>
+</li>
+</ol>
+
+<div id="_a2cc03fd-622e-8c26-b24e-c50caf9d7270" class="Note"><p><span class="note_label">NOTE  2</span>&#xA0; The CSRC endpoint provides additional bibliographic detail not provided
+by the CrossRef set, and also provides data on pre-publication stage documents
+while the latter set only provides data on published documents.</p></div>
+
+<div id="_7e2c9dfa-cf92-f40c-3ba5-8b413bc10666" class="Note"><p><span class="note_label">NOTE  3</span>&#xA0; The Relaton NIST bibliographic dataset was built and offered to the public
+sanctioned by the relevant parties at NIST.</p></div>
+</div>
+
+<div id="_proposal_3"><h3>4.3.2.&#xA0; Proposal</h3>
+
+<p id="_c1271fd3-260d-5928-8f78-ad2327b0386d">Ribose has back-tested the full database of 19,283 NIST Tech Publications with the PubID scheme, including with documents published under NBS, and the scheme applies well given minor tweaks. These publications span the publication years of 1901 to 2021.</p>
+
+<p id="_7c565038-ab75-24d4-2a22-e586025c373e">We have built up a full list of NIST and NBS Tech Pubs series in <a href="#element-series">Annex A.3</a>, and all of them have shown to work with the PubID scheme.</p>
+
+<p id="_a0b03275-7b4a-eed6-51cd-ddf9a70dca02">Adoption of this recommendation requires the creation of a new &#x201C;publisher&#x201D; data element (<a href="#element-publisher">Annex A.2</a>), where it can be &#x201C;NIST&#x201D; or &#x201C;NBS&#x201D;.</p>
+</div>
+</div>
+        <div id="_recommendation_4_support_extra_part_types"><h2 id="toc9">4.4.&#xA0; Recommendation 4: Support extra part types</h2>
+
+<div id="_background_3"><h3>4.4.1.&#xA0; Background</h3>
+
+<p id="_c1f177e0-ec33-79cc-efb2-4d30b79a6dfa">In <a href="#PUBID">NIST PubID</a> the part types supported include &#x201C;Part&#x201D;, &#x201C;Volume&#x201D;, &#x201C;Section&#x201D;, &#x201C;Supplement&#x201D; and &#x201C;Index&#x201D;.</p>
+
+<p id="_5d8999e1-197a-ae57-2e74-6954048e8b27">However, in the NIST Library&#x2019;s collection of NIST Tech Pubs, there are also the following types of documents:</p>
+
+<ol type="1" id="_ee327bdb-8472-b2fb-7e9a-584da02659c1"><li><p id="_d891335e-f337-ce62-a9fa-5963bd10ff54">Addendum. &#x201C;NIST SP 800-38A&#x201D; has a separately published addendum;</p>
+</li>
+<li><p id="_675c24e6-68fb-3108-a447-9babec887443">Insert. &#x201C;NBS CIRC 25 insert&#x201D; is an insert;</p>
+</li>
+<li><p id="_690588c0-d817-22cd-603c-736c843861f4">Errata. &#x201C;NIST SP 801-errata&#x201D; is a published errata.</p>
+</li>
+</ol>
+</div>
+
+<div id="_recommendation"><h3>4.4.2.&#xA0; Recommendation</h3>
+
+<p id="_b48b1c47-eb1a-7fbc-6e08-b3fa06cf28de">Support these additional part types with the following encoding:</p>
+
+<ol type="1" id="_1953ed30-3748-844f-2e79-c6f3e4c82d88"><li><p id="_e08c5aa8-b149-af28-850c-f7fa15ec964a">Addendum. <b>&#x201C;add&#x201D;</b> followed by potentially a number;</p>
+</li>
+<li><p id="_9984102d-6d16-802b-c4f1-3224c9275c8a">Insert. <b>&#x201C;ins&#x201D;</b>;</p>
+</li>
+<li><p id="_983d4834-d689-d96b-660c-4c001deb0023">Errata. <b>&#x201C;err&#x201D;</b>&#x201C;.</p>
+</li>
+</ol>
+
+<p id="_044bd28b-dcf0-3234-8310-cdb101b60eb3">The full list of part types is given in <a href="#elements-part">Annex A.6</a>.</p>
+</div>
+</div>
+      </div>
+      <div id="conclusion">
+        <h1 id="toc10">5.&#xA0; Summary</h1>
+        <p id="_ebdcbfae-7310-b81d-a022-41a009f6b60d">Ribose has provided a list of recommendations to enrich the NIST PubID scheme detailed in the &#x201C;Publication Identifier Syntax for NIST Technical Series Publications&#x201D; document.</p>
+        <p id="_e432f057-de2a-02f3-a2f9-05088b3f57d1">Having been involved with the PubID idea, we believe it is an exemplary work that other organizations could adopt as best practice, and we are committed to be early adopter of the NIST PubID scheme:</p>
+        <ul id="_08475a9f-59f5-4bb8-5d07-80f404def69c"><li><p id="_6f3b765f-616c-9c5f-039c-efe51b672de9">Ribose has enhanced the NIST version of Metanorma to automatically embed the
+NIST PubID within its default metadata.</p>
+</li>
+<li><p id="_02312890-f87d-8361-1516-d58678e8e56d">Ribose has updated its open-source Relaton bibliographic management software
+which enables users to directly cite information using NIST PubID.</p>
+</li>
+</ul>
+        <p id="_8dcd60f7-b938-9328-91f4-99163bdbd42a">Ribose expresses appreciation to NIST for the opportunity to submit these comments. The authors would especially like to thank Jim Foti of the Computer Security Division, Kathryn Miller and Kate Bucher of the Information Services Office for continuously improving NIST&#x2019;s approach to developing and publishing the NIST Technical Series of publications.</p>
+      </div>
+      <br />
+      <div id="annexa" class="Section3">
+        <h1 class="Annex" id="toc11">Annex A<br />(informative)<br /><br />Amended elements of the PubID</h1>
+        <div id="_general_2"><h2 id="toc12">A.1.&#xA0; General</h2>
+
+<p id="_ed57bc7a-9eae-4713-737c-b7718c9e4723">This section provides a set of elements that provides additional information compared with the list provided in <a href="#PUBID">NIST PubID</a>.</p>
+
+<p id="_2d668e0e-2079-82ce-306f-c8d848ae8fde">Notably, it provides data elements their corresponding rendering text for &#x201C;full form&#x201D;, &#x201C;abbreviated form&#x201D; and &#x201C;machine-readable&#x201D; formats.</p>
+</div>
+        <div id="element-publisher"><h2 id="toc13">A.2.&#xA0; Publisher</h2>
+
+<p class="TableTitle" style="text-align:center;">Table A.1&#xA0;&#x2014; Publisher values</p><table id="_4f5de270-fc9b-b63d-ea61-da7e31ed1e57" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 50%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Abbrev</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Short</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">National Institute of Standards and Technology</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Natl. Inst. Stand. Technol.</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">NIST</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">National Bureau of Standards</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Natl. Bur. Stand.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">NBS</td></tr></tbody></table>
+</div>
+        <div id="element-series"><h2 id="toc14">A.3.&#xA0; Series</h2>
+
+<p id="_c81a10a1-a583-0ff0-ccdb-b0a468a11638">When a series has not seen usage of an &#x201C;abbreviated form&#x201D;, the value of &#x201C;N/A&#x201D; is used.</p>
+
+<p class="TableTitle" style="text-align:center;">Table A.2&#xA0;&#x2014; Series values</p><table id="_4976a82d-54a4-d32d-bc08-cc7438ae6e48" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 5.2631%;" /><col style="width: 10.5263%;" /><col style="width: 21.0526%;" /><col style="width: 21.0526%;" /><col style="width: 10.5263%;" /><col style="width: 31.5791%;" /></colgroup><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Publisher</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Prefix</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Abbrev</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">MR (with Publisher)</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Example</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">NIST AMS</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Advanced Manufacturing Series</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Adv. Man. Ser.</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>NIST.AMS</tt></td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/ams/NIST.AMS.200-2.pdf">NIST AMS 200-2</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST BSS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Building Science Series</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Bldg. Sci. Ser.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.BSS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=901127">NIST BSS 181</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS BSS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Building Science Series</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Bldg. Sci. Ser.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.BSS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/BSS/nbsbuildingscience94.pdf">NBS BSS 94</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS BMS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Building Material Structures Report</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.BMS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/BMS/nbsbuildingmaterialsstructures140e2.pdf">NBS BMS 140 Ed. 2</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS BRPD-CRPL-D</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Basic Radio Propagation Predictions Series</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.BRPD-CRPL-D</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/brpd-crpl-d/brpd-crpl-d209.pdf">NBS BRPD-CRPL-D 209</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS BH</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Building and Housing Reports</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.BH</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/BH/nbsbuildinghousing18.pdf">NBS BH 18</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS CRPL</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Central Radio Propagation Laboratory Reports</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.CRPL</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/crpl/crpl-6-3.pdf">NBS CRPL 6-3</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS CRPL-F-A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CRPL Ionospheric Data</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.CRPL-F-A</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/crpl-f-a/crpl-f-a245.pdf">NBS CRPL-F-A 245</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS CRPL-F-B</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CRPL Solar-Geophysical Data</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS CRPL-F-B245</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/crpl-f-b/crpl-f-b245.pdf">NBS CRPL-F-B245</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS IP</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CRPL Ionospheric Predictions</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.IP</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/ip/nbsip25.pdf">NBS IP 25</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS CIRC</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Circulars</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.CIRC</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular460sup1962.pdf">NBS CIRC 460sup1962</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS CIS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Consumer Information Series</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.CIS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/CIS/nbscis10.pdf">NBS CIS 10</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS CS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Commercial Standards</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.CS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/CS/cs113-51.pdf">NBS CS 113-51</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS CSM</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Commercial Standards Monthly</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.CSM</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/CSM/nbscsmv9n10.pdf">NBS CSM v9n10</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">FIPS PUB</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Federal Information Processing Standards Publication</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Federal Inf. Process. Stds.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.FIPS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf">FIPS PUB 202</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NISTGCR</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Grant/Contract Reports</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.GCR</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/gcr/2017/NIST.GCR.17-917-45.pdf">NIST GCR 17-917-45</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS GCR</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Grant/Contract Reports</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.GCR</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://www.nist.gov/system/files/documents/2017/05/09/NISTGCR_77_82.pdf">NBS GCR 77-82</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST HB</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Handbook</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Handb.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.HB</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=932523">NIST Handbook 150-872</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS HB</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Handbook</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Handb.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.HB</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://www.nist.gov/system/files/documents/pml/wmd/NBS-Handbook-1371.pdf">NBS Handbook 137</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS HR</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Hydraulic Research in the United States</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.HR</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/HR/hr14A.pdf">NBS HR 14A</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS IRPL</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Interservice Radio Propagation Laboratory</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.IRPL</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/irpl/irpl-r27.pdf">NBS IRPL 27</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">ITL Bulletin</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">ITL Bulletin</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.ITLB</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=930751">NIST ITL Bulletin August 2020</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST LC</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Letter Circular</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.LCIRC</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/LC/nistlettercircular1136.pdf">NIST LC 1136</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS LC</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Letter Circular</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.LCIRC</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://www.govinfo.gov/content/pkg/GOVPUB-C13-505e153915bb567dd587b7efd26b000a/pdf/GOVPUB-C13-505e153915bb567dd587b7efd26b000a.pdf">NBS LC 1128</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST MN</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Monograph</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Monogr.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.MN</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/MONO/nistmonograph175.pdf">NIST Monograph 175</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS MN</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Monograph</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Monogr.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.MN</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/MONO/nbsmonograph125supp1.pdf">NIST Monograph 125</a>,
+<a href="https://nvlpubs.nist.gov/nistpubs/Legacy/MONO/nbsmonograph125.pdf">NIST Monograph 125, Supp. 1</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS MP</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Miscellaneous Publications</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.MP</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/MP/nbsmiscellaneouspub260e1968.pdf">NBS MP 260e1968</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST NCSTAR</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">National Construction Safety Team Report</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Natl. Constr. Tm. Act Rpt.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.NCSTAR</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://www.nist.gov/publications/design-and-construction-structural-systems-federal-building-and-fire-safety">NIST NCSTAR 1-1A</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST NSRDS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">National Standard Reference Data Series</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Natl. Stand. Ret. Data Ser.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.NSRDS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=931745">NIST NSRDS 100-2021</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NSRDS-NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">National Standard Reference Data Series</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Natl. Stand. Ret. Data Ser.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.NSRDS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/NSRDS/nbsnsrds1.pdf">NSRDS-NBS 1</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NISTIR</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Interagency or Internal Report</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.IR</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8347.pdf">NISTIR 8347</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBSIR</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Interagency or Internal Report</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.IR</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://www.nist.gov/system/files/documents/2017/04/28/nbsir-79-1776.pdf">NBSIR 79-1776</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST OWMWP</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Office of Weights and Measures White Papers</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.OWMWP</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/OWMWP/NIST.OWMWP.06-13-2018.pdf">NIST OWMWP 06-13-2018</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS PC</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Photographic Circulars</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.PC</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/PC/nbsphotographiccircular.pdf">NBS RPT 10394</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS RPT</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Reports</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.RPT</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/RPT/nbsreport10394.pdf">NBS PC 1</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST PS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Voluntary Product Standards</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Prod. Stand.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.PS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://www.nist.gov/system/files/documents/2019/12/11/PS%2020-20%20final%20WERB%20approved.pdf">NIST PS 20-20</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS SIBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Special Interior Ballistics Studies</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.SIBS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SIBS/nbssibs.pdf">NBS SIBS 1</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS PS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Voluntary Product Standards</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Prod. Stand.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.PS</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://storage.cloversites.com/resinsystemsinc/documents/1569%20PDF.pdf">NBS PS 15-69</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST SP</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Special Publication</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Spec. Publ.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.SP</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf">NIST SP 800-115</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS SP</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Special Publication</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Spec. Publ.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.SP</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication500-137.pdf">NBS SP 500-137</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST TN</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Technical Note</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Tech. Note</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.TN</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2156.pdf">NIST TN 2156</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS TN</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Technical Note</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Tech. Note</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.TN</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/TN/nbstechnicalnote876.pdf">NBS TN 876</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NBS TIBM</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Technical Information on Building Materials</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NBS.TIBM</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/TIBM/nbstibm61.pdf">NBS TIBM 61</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST TTB</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Technology Transfer Brief</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.TTB</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=929334">NIST TTB 2</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST DCI</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Data Collection Instruments</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Data Collect. Instr.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.DCI</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/dci/NIST.DCI.002.pdf">NIST DCI 002</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST EAB</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Economic Analysis Brief</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">N/A</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.EAB</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nvlpubs.nist.gov/nistpubs/eab/NIST.EAB.9.pdf">NIST EAB 3</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST Other</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Other</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Other</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.O</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=925900">Report to the President</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CSRC White Paper</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Cybersecurity Resource Center White Paper</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CSWP</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.CSWP</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=932330">NIST.CSWP.04282021</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CSRC Book</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Cybersecurity Resource Center Book</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CSRC Book</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.CSB</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://csrc.nist.gov/CSRC/media/Publications/book/1974/executive-guide-to-computer-security/documents/executive-guide-to-computer-security&#x2014;&#x200B;brochure.pdf">Executive Guide to Computer Security</a>,
+<a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=917850">Metrics to Security</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CSRC Use Case</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Cybersecurity Resource Center Use Case</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CSRC Use Case</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.CSUC</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nccoe.nist.gov/sites/default/files/library/project-descriptions/hit-infusion-pump-project-description-final.pdf">Wireless Medical Infusion Pumps: Medical Device Security</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CSRC Building Block</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Cybersecurity Resource Center Building Block</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CSRC Building Block</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>NIST.CSBB</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="https://nccoe.nist.gov/sites/default/files/library/project-descriptions/dns-secure-email-project-description-final.pdf">Domain Name System-Based Security for Electronic Mail</a></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">JPCRD</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Journal of Physical and Chemical Reference Data</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">J. Phys. &amp; Chem. Ref. Data</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>JPCRD</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">(excluded from PubID scheme)</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">JRES</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Journal of Research of NIST</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">J. Res. Natl. Inst. Stan.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><tt>NIST.JRES</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">(excluded from PubID scheme)</td></tr></tbody></table>
+</div>
+        <div id="_stage"><h2 id="toc15">A.4.&#xA0; Stage</h2>
+
+<p id="_cc69d1c7-331a-a18e-3392-402e96b32736">The stage code element only applies to non-final publications.</p>
+
+<p id="_7f28a91e-9fed-2523-f6c0-a501e2587e55">In most series, documents are only released as final publications, and therefore their PubIDs will not contain a stage code.</p>
+
+<p id="_2ed9f4ec-552e-52f1-879e-2adbc764bbb2">Only some series support stage codes, e.g. SP 800 and SP 1800.</p>
+
+<p class="TableTitle" style="text-align:center;">Table A.3&#xA0;&#x2014; Stage values</p><table id="_2a51fad0-0527-e50e-0ea3-458ea19a0d0c" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 66.6666%;" /><col style="width: 33.3334%;" /></colgroup><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Value</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Initial Public Draft</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">IPD</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Second Public Draft (to the Nth Public Draft)</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2PD (&#x2026;&#x200B; nPD)</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Final Public Draft</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">FPD</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Work-in-Progress Draft</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">WD</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Preliminary Draft</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">PreD</td></tr></tbody></table>
+</div>
+        <div id="_report_number"><h2 id="toc16">A.5.&#xA0; Report number</h2>
+
+<p id="_117b1752-b975-b513-a620-ed97bec22e42">The contents and pattern of the report number are dependent on the series.</p>
+
+<p id="_4ba60e72-ddab-1ec9-7341-309f2d2bf65d">Possible values:</p>
+
+<ul id="_3daafef3-179e-934c-2d36-dafbf688f37e"><li><p id="_7d371284-72de-f6f8-73dd-e98455cedf48"><tt>{sequence number}</tt></p>
+</li>
+<li><p id="_ffe842be-dc9e-d4f3-0cbc-8d8796175887"><tt>{subseries}-{sequence number}</tt></p>
+</li>
+<li><p id="_135a52b9-2128-56a5-95e7-efaaa2c8e62f"><tt>{sequence number}-{volume}</tt></p>
+</li>
+<li><p id="_6335b6dc-f09b-26ac-1497-57d5cb3437cf"><tt>{sequence number}-2</tt></p>
+</li>
+<li><p id="_b5fd3408-6e32-3acf-2140-eb6aeb567502"><tt>{subseries}-{sequence number}-2</tt></p>
+</li>
+<li><p id="_c98a23c1-0a86-dcec-6fc9-f17bf1fbad2d">etc.</p>
+</li>
+</ul>
+
+<p id="_2d164392-9259-1e84-02dc-b8d352b67af1">A &#x201C;Part&#x201D; can also be indicated by an appended alphabetic character to the end.</p>
+</div>
+        <div id="elements-part"><h2 id="toc17">A.6.&#xA0; Part</h2>
+
+<p id="_07fccbd1-43cb-0432-a991-c09ae7b2e5eb">All part types allow a suffix number.</p>
+
+<p class="TableTitle" style="text-align:center;">Table A.4&#xA0;&#x2014; Part values</p><table id="_7d134637-9edc-3347-cfb0-4e66d17721e3" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 50%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Abbrev and Short</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">MR</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Part</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Pt.</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>pt</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Volume</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Vol.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>v</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Section</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Sec.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>sec</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Supplement</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Suppl.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>sup</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Index</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Index</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>indx</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Addendum</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Add.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>add</tt> (TBC with NIST)</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Insert</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ins.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>ins</tt> (TBC with NIST)</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Errata</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Err.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><tt>err</tt> (TBC with NIST)</td></tr></tbody></table>
+</div>
+        <div id="_edition"><h2 id="toc18">A.7.&#xA0; Edition</h2>
+
+<p class="TableTitle" style="text-align:center;">Table A.5&#xA0;&#x2014; Edition values</p><table id="_35d1408e-c3db-75a4-79b0-85a5ea65fecb" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 50%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Abbrev and Short</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">MR</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Revision</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Rev.</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>r</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Edition</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ed.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>e</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Version</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Ver.</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><tt>ver</tt></td></tr></tbody></table>
+</div>
+        <div id="_translation"><h2 id="toc19">A.8.&#xA0; Translation</h2>
+
+<p id="_51d7872a-1519-0797-34ac-f176c997c553">An ISO 639-2 3-letter code that represents a translated document from English.</p>
+
+<p id="_82a5e322-7961-e606-06f1-a5a9ed329398">If a document is translated from English, suffix the document with a 3-letter ISO 639-2 code within parentheses.</p>
+
+<p id="_768773f5-715c-d252-86f9-28ef3a994db6">Raw values seen in legacy DOIs include:</p>
+
+<p class="TableTitle" style="text-align:center;">Table A.6&#xA0;&#x2014; Translation sample values</p><table id="_b7a21546-d067-59c4-c2d9-ad9e1d9668da" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 40%;" /><col style="width: 20%;" /><col style="width: 20%;" /><col style="width: 20%;" /></colgroup><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Correct value</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">MR</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Legacy values seen in DOI</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Spanish</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">(ESP)</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>esp</tt></td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>es</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Vietnamese</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">(VIE)</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>vie</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>viet</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Portuguese</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">(POR)</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>por</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><tt>port</tt></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Chinese</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">(ZHO)</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><tt>zho</tt></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><tt>chi</tt></td></tr></tbody><tfoot><tr><td colspan="4" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div id="_15f34efb-d5be-d2d3-eb07-049fa194a0f2" class="Note"><p><span class="note_label">NOTE</span>&#xA0; Only these 4 languages were seen in the full NIST Tech Pubs database.</p></div></td></tr></tfoot></table>
+
+
+</div>
+        <div id="_update"><h2 id="toc20">A.9.&#xA0; Update</h2>
+
+<div id="_general_3"><h3>A.9.1.&#xA0; General</h3>
+
+<p id="_fdf9d573-fadb-c34e-bf86-d1e240f14534">When a document is updated with an errata, the original edition may be reissued to include the errata.</p>
+
+<p id="_ebc20e20-f61e-ff26-e01b-e7a920185e5a">These documents will display the text &#x201C;includes updates as of&#x2026;&#x200B;&#x201D;.</p>
+
+<p id="_b4ac0488-9236-5596-2dbd-daf214bf8783">In this case the document identifier will include the element &#x201C;Update&#x201D;.</p>
+
+<p class="TableTitle" style="text-align:center;">Table A.7&#xA0;&#x2014; Update values</p><table id="_ec075071-e476-22f6-e1e4-614fb4ed85e7" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 50%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Abbrev and Short</th><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">MR</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Update</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Upd.</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><tt>u</tt></td></tr></tbody></table>
+</div>
+
+<div id="_update_number"><h3>A.9.2.&#xA0; Update number</h3>
+
+<p id="_01b39c58-59db-f943-9059-3210b3ef1d83">A sequential integer numbering of the update counting from the original document.</p>
+
+<p id="_09bc0ddf-c882-657b-3f77-bab30367cb9c">The first update is numbered 1, and so forth.</p>
+</div>
+
+<div id="_update_year"><h3>A.9.3.&#xA0; Update year</h3>
+
+<p id="_1a7ed787-b178-d6cf-b87c-2a5dfe947be3">The year last updated, shown as a suffix to the identifier.</p>
+
+<ul id="_1ab086f1-e522-8137-e944-96e922c144fb"><li><p id="_d3371768-9f01-8a92-2617-717771970801"><tt>{identifier}:{update-year}</tt></p>
+</li>
+</ul>
+</div>
+</div>
+      </div>
+      <br />
+      <div id="_pubid_patterns" class="Section3">
+        <h1 class="Annex" id="toc21">Annex B<br />(informative)<br /><br />PubID patterns</h1>
+        <div id="_presentation"><h2 id="toc22">B.1.&#xA0; Presentation</h2>
+
+<p id="_f45cf640-037f-7924-5c9b-626568b390f1">Generally in this order:</p>
+
+<ul id="_9872e07d-f8cc-a3a7-70d7-5b509a45f0dd"><li><p id="_dbd3246c-5d96-3505-03c7-ec1e73de7406">No update: <tt>{series} {stage} {report number}{part}2({translation})</tt></p>
+</li>
+<li><p id="_76140919-29f1-6925-613f-4f2477c3616e">With update: <tt>{series} {stage} {report number}{part}2({translation})/{update} {update number}:{update year}</tt></p>
+</li>
+</ul>
+</div>
+        <div id="_full_pubid"><h2 id="toc23">B.2.&#xA0; Full PubID</h2>
+
+<p id="_6a6e34df-2e0f-8300-2f22-644a19286073">This is the fully expressed, unambiguous form of the Publication ID.</p>
+
+<pre id="_338b5769-43ff-d692-7a77-31741423c2a5" class="prettyprint ">{publisher} {series} {reportnumber} {part | volume)}, {revision} {(draft), optional}</pre><p class="SourceTitle" style="text-align:center;">Figure B.1</p>
+
+
+<div id="_29b9e7cd-9842-a260-dc5f-2796cd007068" class="example"><p class="example-title">EXAMPLE  1</p><p id="_e22cceca-3b63-3f01-a82d-4cac0d790eb5">National Institute of Standards and Technology Federal Information Processing Standards Publication 199</p>
+</div>
+
+<div id="_dff148b7-0d2e-0ef0-309b-fcdcebd901c4" class="example"><p class="example-title">EXAMPLE  2</p><p id="_1565c173-48cf-5107-8089-b817f9357b19">National Institute of Standards and Technology Special Publication 800-27, Revision A</p>
+</div>
+
+<div id="_e9eaf0cc-b0c0-5746-5df6-b598d4745938" class="example"><p class="example-title">EXAMPLE  3</p><p id="_79c5b27e-a815-b9e4-73e1-6bd5206ccb99">National Institute of Standards and Technology Special Publication 800-39 (Second Public Draft)</p>
+</div>
+
+<div id="_dc78d246-a64a-351d-5ac5-3e2449271e31" class="Note"><p><span class="note_label">NOTE</span>&#xA0; Originally described in <a href="https://github.com/metanorma/metanorma-nist/issues/98">https://github.com/metanorma/metanorma-nist/issues/98</a></p></div>
+</div>
+        <div id="_abbreviated_pubid"><h2 id="toc24">B.3.&#xA0; Abbreviated PubID</h2>
+
+<p id="_57119d6b-ceb3-2980-372b-051b3c34851d">This form is used in the Authority section.</p>
+
+<pre id="_0aee2f84-180e-b0ac-ef37-d7d279a8e205" class="prettyprint ">{abbrev(publisher)} {abbrev(series)} {reportnumber} {part | abbrev(volume)}, {abbrev(revision)} {(abbrev(draft)), optional}</pre><p class="SourceTitle" style="text-align:center;">Figure B.2</p>
+
+
+<ul id="_50b5665a-7597-e1f6-86ee-7a661b18c3b4"><li><p id="_c9be17f0-ad90-2701-6663-9886409b31de"><tt>abbrev(series)</tt> represent the abbreviation of the Series title</p>
+<div id="_cbe9b86e-6789-0e20-ae6b-372ee94f2991" class="Note"><p><span class="note_label">NOTE  1</span>&#xA0; The &#x201C;update date&#x201D; (<tt>{update-date}</tt>) is not represented in this syntax and
+shall be considered in the final scheme.</p></div></li>
+</ul>
+
+
+
+<div id="_921cb4c2-515c-4eb0-4cad-604c48abe545" class="example"><p class="example-title">EXAMPLE  1</p><p id="_f5828dd8-c122-9eef-6371-31b377fc2bfb">&#x201C;Natl. Inst. Stand. Technol. Spec. Publ. 800-78-4&#x201D;</p>
+</div>
+
+<div id="_0450d364-c1e5-81b5-b3f2-337e7c597470" class="example"><p class="example-title">EXAMPLE  2</p><p id="_a5b6bda1-0877-5e7d-95da-bfc18ad51655">&#x201C;Natl. Inst. Stand. Technol. Spec. Publ. 800-116&#x201D;</p>
+</div>
+
+<div id="_b05e9e6b-1858-2ce5-8b0c-a35180fe0782" class="example"><p class="example-title">EXAMPLE  3</p><p id="_33f1028f-270e-9705-5a9b-2b232fce4d5f">&#x201C;Natl. Inst. Stand. Technol. Spec. Publ. 800-57 Part 1, Revision 4&#x201D;</p>
+</div>
+
+<div id="_22862577-6812-a0de-76c4-1094b9afb0db" class="Note"><p><span class="note_label">NOTE  2</span>&#xA0; Originally from <a href="https://github.com/metanorma/metanorma-nist/issues/88">https://github.com/metanorma/metanorma-nist/issues/88</a></p></div>
+</div>
+        <div id="_short_pubid"><h2 id="toc25">B.4.&#xA0; Short PubID</h2>
+
+<p id="_6e246a33-7327-911a-25c9-a78ba30a1701">The &#x201C;short form&#x201D; is used to cite the documents within text.</p>
+
+<p id="_9c7e5e01-cb80-ffa1-af4e-5b8b0c878acd">It is used in these situations:</p>
+
+<ol type="1" id="_ec60dc64-333e-a7f6-6475-d0a39dee8e36"><li><p id="_4c977077-05d8-5cf0-b355-259430cfa313">Locality references. &#x201C;In Section 3.2 of SP 800-187&#x2026;&#x200B;&#x201D; (the &#x201C;SP 800-187&#x201D; is a link).</p>
+<div id="_85702a43-7912-3802-25a3-faa43b525a08" class="Note"><p><span class="note_label">NOTE  1</span>&#xA0; NIST pubs are composed of &#x201C;Sections&#x201D; not &#x201C;Clauses&#x201D;</p></div>
+</li>
+<li><p id="_377a0782-7246-807e-d6a9-1df62f3bb773">A generic document reference. &#x201C;SP 800-53 describes&#x2026;&#x200B;&#x201D;. This form does not specify a revision or update date.</p>
+</li>
+<li><p id="_bf2c40d6-250f-595e-492a-071d690467d9">&#x201C;All parts&#x201D;. &#x201C;The SP 800-57 subseries describes key management&#x2026;&#x200B;&#x201D;.</p>
+<div id="_b8363b26-d0b7-b539-d626-e61383ff882a" class="Note"><p><span class="note_label">NOTE  2</span>&#xA0; Currently, citations within documents can take form of say,
+&#x201C;NISTIR 6885 2003 Edition (February 2003)&#x201D;, which is rather long in length causing
+disruption in reading flow.</p></div></li>
+</ol>
+
+
+
+<p id="_304c6d1b-1697-7eb0-d20b-42b78e8831ed">The syntax for a Short PubID could be:</p>
+
+<pre id="_8d02da3c-cb25-5337-447a-341e0f1f8496" class="prettyprint ">{abbrev(series)} {reportnumber} {abbrev(volume)} {abbrev(revision)} {(draft), optional} {edition, optional}</pre><p class="SourceTitle" style="text-align:center;">Figure B.3</p>
+
+
+<div id="_bec21b62-8378-6d36-cf91-908e1ee38062" class="Note"><p><span class="note_label">NOTE  3</span>&#xA0; For FIPS, <tt>{reportnumber}</tt> is the full FIPS number, including revision, e.g.,
+<tt>140-2</tt>.</p></div>
+
+<div id="_c97fba4b-cc96-6708-c450-aac453b3e324" class="Note"><p><span class="note_label">NOTE  4</span>&#xA0; Originally from <a href="https://github.com/metanorma/metanorma-nist/issues/88">https://github.com/metanorma/metanorma-nist/issues/88</a>.</p></div>
+
+<p id="_d6f3074e-9d63-fb5c-697a-567329b3ba87">Short form date:</p>
+
+<ul id="_3fcfa7a7-6331-14ef-2dcd-8373fce37937"><li><p id="_5ea7ce42-054c-38a8-8ccf-1cd435e144f8"><tt>Month YYYY</tt></p>
+</li>
+</ul>
+
+<div id="_7ea7380a-60ff-d3bc-7c4e-f5f0aa882ef0" class="example"><p class="example-title">EXAMPLE  1</p><p id="_0fbe1818-7619-3eaa-13d3-e84550b76c4b">NIST SP 800-53r4 (20152201) supersedes NIST SP 800-53r4 (20140115)</p>
+</div>
+
+<div id="_42e038be-0621-8e59-e054-afcd1c1ee28b" class="example"><p class="example-title">EXAMPLE  2</p><p id="_7ad45ecf-5b71-5e9f-7348-85d31324b308">NIST SP 800 63A (December 2017) supersedes NIST SP 800-63A</p>
+</div>
+
+<div id="_466bb469-7e1c-cb21-e906-b3215d0ae84a" class="example"><p class="example-title">EXAMPLE  3</p><p id="_2a1f13ed-d11b-8dd7-d92f-04f1b894bf4b">NIST SP 800 57 Part 1 Revision 4 supersedes NIST SP 800-57 Part 1 Revision 3 (&#x201C;Rev.&#x201D; is also accepted, and converted to &#x201C;Revision&#x201D;)</p>
+</div>
+
+<div id="_43ac1e00-f83f-4a08-a51a-ef53ed5a6840" class="example"><p class="example-title">EXAMPLE  4</p><p id="_3492795b-1789-7e14-0238-3113abed1055">NIST SP 800 160 Volume 1 supersedes NIST SP 800-160 (20180103) (&#x201C;Vol.&#x201D; is also accepted, and converted to &#x201C;Volume&#x201D;)</p>
+</div>
+
+<div id="_47659326-89f1-ddb7-70f0-72e8c3bfb3cf" class="example"><p class="example-title">EXAMPLE  5</p><p id="_1d7460ae-2a8a-23a7-b8ce-eecde4b0d56b">Undated form &#x201C;NIST SP 800 53r4&#x201D;</p>
+</div>
+
+<p id="_e260493f-c1f7-396c-4fc0-ab48109c0628">Strip Revision and Date from title, only if the Revision and Date are unique for each document number. These are identified as &#x201C;Rev. {number}&#x201D;, &#x201C;Revision {number}&#x201D; and &#x201C;(Month YYYY)&#x201D;, whichever comes first.</p>
+</div>
+        <div id="patterns-mr"><h2 id="toc26">B.5.&#xA0; Machine-readable PubID</h2>
+
+<p id="_435db01e-270a-3530-ae12-61d277fa147d">PubID form intended for machine parsing. Special care is taken to eliminate empty spaces and limit the character set to alphanumeric characters.</p>
+
+<p id="_0ab27edd-8580-658a-9305-ddb8474df3c1">The syntax could be:</p>
+
+<pre id="_a429d1d5-7ad7-b5fd-e47b-6d8870974408" class="prettyprint ">{publisher}.{series}.[{stage}.]{reportnumber}.{part}.{revision}.[{lang}.]{update-date}</pre><p class="SourceTitle" style="text-align:center;">Figure B.4</p>
+
+
+<pre id="_879ec696-e7ea-4955-804f-10c15b154019" class="prettyprint ">{publisher}.{series}.[{stage}.]{reportnumber}.{part}.{revision}.[{lang}.][{update}]{update-date}</pre><p class="SourceTitle" style="text-align:center;">Figure B.5</p>
+
+
+<p id="_582127ef-9df4-df65-c52c-9cb0ac0fb53e">Generally, this rule should be able to uniquely identify an edition of a document.</p>
+
+<ul id="_f6e1ef5a-46bd-f49d-0ad2-feb5af218123"><li><p id="_c6f2c2be-77ce-f079-5945-baf74e439607"><tt>{part}</tt></p>
+<ul id="_5bfe79b6-560e-fcd3-2297-c313d8156033"><li><p id="_8a4d5fb5-659f-fd32-79fe-ecd4e043a710">Part</p>
+<ul id="_5409b589-b750-f332-ee2a-62b4373ee082"><li><p id="_afe810b6-16e6-3d86-abf4-30222f5e6936">A &#x201C;Part 1&#x201D; document is encoded as &#x201C;pt1&#x201D;;</p>
+</li>
+<li><p id="_45c5d34f-c1bc-5cd0-36a1-70fd71b06a87">When a letter part is indicated, e.g. &#x201C;800-63A&#x201D;, we should keep it as part of
+the reportnumber, but also explicitly indicate the &#x201C;pt&#x201D;, e.g.
+<tt>NIST.SP.800-38A.pt-A</tt></p>
+</li>
+</ul>
+</li>
+<li><p id="_b18e98af-747a-b522-d5a5-f790dc8e7646">Volumes</p>
+<ul id="_fa059deb-34c1-6934-f85d-c15c05289b1f"><li><p id="_a86c23e1-6b0e-699f-2ad6-e66f0174b2dc">&#x201C;Volume 1&#x201D; is encoded as &#x201C;v1&#x201D;;</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p id="_815efa77-bbc6-95a5-81f9-3c04a04d6f08"><tt>{revision}</tt></p>
+<ul id="_8ac132b0-b2ae-bc1c-5a3c-d886da497c38"><li><p id="_26744cae-f4f1-8227-8051-2ea34479fb28">&#x201C;Revision 1&#x201D; is encoded as &#x201C;r1&#x201D;</p>
+</li>
+<li><p id="_9959f1d5-3d8f-ce26-839e-2cc4c6aaaa7d">If a superseding edition is a full revision, it will get the next Rev. #.</p>
+</li>
+<li><p id="_8cc818a2-6aae-01c0-7452-3fc7ca255738">If a superseding edition is just an errata update, we use the update date
+from the title page (&#x201C;includes updates as of &#x2026;&#x200B;&#x201D;) to uniquely identify this
+edition. Preferably in the <tt>-yyyymmdd</tt> format.</p>
+</li>
+</ul>
+</li>
+<li><p id="_28d9db6b-d1a5-a137-9e50-f8afbd0eb2ff"><tt>{update}</tt></p>
+<ul id="_41b68645-4146-81fc-087c-fe8fbc24c8d3"><li><p id="_746bfa3b-22f0-3449-c8b5-300067b782ae">&#x201C;Update 1&#x201D; is encoded as &#x201C;u1&#x201D;</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<p id="_f1afa5dd-7e18-5b7f-f63f-2ca188bed605">Some examples:</p>
+
+<div id="_91ffd101-f925-37de-798d-cb1bafd0a196" class="example"><p class="example-title">EXAMPLE  1</p><p id="_0959d10e-0b1b-08bd-1f4a-fbacc225f5ed"><tt>NIST.SP.800-53r4-20152201</tt> supersedes <tt>NIST.SP.800-53r4-20140115</tt></p>
+</div>
+
+<div id="_288ce822-57a1-b796-4115-eaf6713bfa19" class="example"><p class="example-title">EXAMPLE  2</p><p id="_8021bd46-979f-f40d-e9b1-a6bf55e2d121"><tt>NIST.SP.800-63A-20171201</tt> supersedes <tt>NIST.SP.800-63A</tt></p>
+</div>
+
+<div id="_ecddce74-9530-62f5-1c0e-adfbed5fb60a" class="example"><p class="example-title">EXAMPLE  3</p><p id="_fbd59247-aaab-b90e-e199-7a2466b417ca"><tt>NIST.SP.800-57pt1r4</tt> supersedes <tt>NIST.SP.800-57pt1r3</tt></p>
+</div>
+
+<div id="_462b896f-3288-5b02-15af-ca1cb35123af" class="example"><p class="example-title">EXAMPLE  4</p><p id="_1e13c652-e630-ffe5-e3ff-e0332cd799ff"><tt>NIST.SP.800-160v1</tt> supersedes <tt>NIST.SP.800-160-20180103</tt></p>
+</div>
+
+<div id="_53a84f02-c95b-b976-8cf0-fa77b1436b06" class="example"><p class="example-title">EXAMPLE  5</p><p id="_d02e2759-0d0d-ec2e-6949-446c565f2924"><tt>NIST.IR.8204.u1-2019</tt> supersedes <tt>NIST.IR.8204</tt></p>
+</div>
+
+<div id="_5cd36086-3cd9-f13a-2e53-93559f350b08" class="example"><p class="example-title">EXAMPLE  6</p><p id="_58204505-5a76-c2cc-91d7-971ee7660b95">The undated form is <tt>NIST.SP.800-53r4</tt></p>
+</div>
+
+<div id="_d7071e26-dff2-96c1-d4d7-1ef7b490aa6b" class="Note"><p><span class="note_label">NOTE</span>&#xA0; Originally from <a href="https://github.com/metanorma/metanorma-nist/issues/88">https://github.com/metanorma/metanorma-nist/issues/88</a>.</p></div>
+</div>
+      </div>
+      <br />
+      <div><h1 class="Section3" id="toc27">Bibliography</h1>
+<p id="RFC3986" class="Biblio">[1]&#xA0; RFC 3986, <i>Uniform Resource Identifier (URI): Generic Syntax</i></p>
+
+</div>
+    </main>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { preferredFont: "STIX" },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+ });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
+  </script>
+
+<script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('.container').animate({ 'padding-left': '31px' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+    }
+});
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+  <script>
+/*
+  $(document).ready(function() {
+          $('[id^=toc]').each(function ()
+          {
+             var currentToc = $(this);
+       var url = window.location.href;
+             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
+          });
+});
+*/
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script>
+
+</body>
+</html>
