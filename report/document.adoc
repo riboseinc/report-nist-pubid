@@ -1,9 +1,9 @@
 = Comments on the "`Publication Identifier Syntax for NIST Technical Series Publications`"
-:edition: 1
+:edition: 2
 :docnumber: 11023
 :copyright-year: 2021
-:revdate: 2021-09-30
-:published-date: 2021-09-30
+:revdate: 2021-12-22
+:published-date: 2021-12-22
 :security: unrestricted
 :doctype: report
 :recipient: techpubs@nist.gov

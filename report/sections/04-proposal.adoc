@@ -190,6 +190,6 @@ Support these additional part types with the following encoding:
 
 . Addendum. *"add"* followed by potentially a number;
 . Insert. *"ins"*;
-. Errata. *err*".
+. Errata. *"err"*".
 
 The full list of part types is given in <<elements-part>>.

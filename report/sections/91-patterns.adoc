@@ -12,30 +12,57 @@ Generally in this order:
 
 === Full PubID
 
-Samples:
+This is the fully expressed, unambiguous form of the Publication ID.
 
-* National Institute of Standards and Technology Federal Information Processing Standards Publication 199
-* National Institute of Standards and Technology Special Publication 800-27, Revision A
-* National Institute of Standards and Technology Special Publication 800-39 (Second Public Draft)
+----
+{publisher} {series} {reportnumber} {part | volume)}, {revision} {(draft), optional}
+----
+
+[example]
+====
+National Institute of Standards and Technology Federal Information Processing Standards Publication 199
+====
+
+[example]
+====
+National Institute of Standards and Technology Special Publication 800-27, Revision A
+====
+
+[example]
+====
+National Institute of Standards and Technology Special Publication 800-39 (Second Public Draft)
+====
 
 NOTE: Originally described in https://github.com/metanorma/metanorma-nist/issues/98
+
 
 === Abbreviated PubID
 
 This form is used in the Authority section.
 
 ----
-Natl. Inst. Stand. Technol. {abbrev(series)} {reportnumber} {part | abbrev(volume)}, {abbrev(revision)}
+{abbrev(publisher)} {abbrev(series)} {reportnumber} {part | abbrev(volume)}, {abbrev(revision)} {(abbrev(draft)), optional}
 ----
 
 * `abbrev(series)` represent the abbreviation of the Series title
-* Note: there is no `{update-date}`
 
-Examples:
+NOTE: The "update date" (`{update-date}`) is not represented in this syntax and
+shall be considered in the final scheme.
 
-* "Natl. Inst. Stand. Technol. Spec. Publ. 800-78-4"
-* "Natl. Inst. Stand. Technol. Spec. Publ. 800-116"
-* "Natl. Inst. Stand. Technol. Spec. Publ. 800-57 Part 1, Revision 4"
+[example]
+====
+"Natl. Inst. Stand. Technol. Spec. Publ. 800-78-4"
+====
+
+[example]
+====
+"Natl. Inst. Stand. Technol. Spec. Publ. 800-116"
+====
+
+[example]
+====
+"Natl. Inst. Stand. Technol. Spec. Publ. 800-57 Part 1, Revision 4"
+====
 
 NOTE: Originally from https://github.com/metanorma/metanorma-nist/issues/88
 
@@ -46,47 +73,69 @@ The "short form" is used to cite the documents within text.
 
 It is used in these situations:
 
-1. Locality references. "In Section 3.2 of SP 800-187…" (the "SP 800-187" is a link).
+. Locality references. "In Section 3.2 of SP 800-187..." (the "SP 800-187" is a link).
 +
 NOTE: NIST pubs are composed of "Sections" not "Clauses"
 
-2. A generic document reference. "SP 800-53 describes…". This form does not specify a revision or update date.
+. A generic document reference. "SP 800-53 describes...". This form does not specify a revision or update date.
 
-3. "All parts". "The SP 800-57 subseries describes key management…".
+. "All parts". "The SP 800-57 subseries describes key management...".
 
-("NISTIR 6885 2003 Edition (February 2003)" is a poor indicator.)
+NOTE: Currently, citations within documents can take form of say,
+"NISTIR 6885 2003 Edition (February 2003)", which is rather long in length causing
+disruption in reading flow.
 
-The correct rule should be:
+The syntax for a Short PubID could be:
 
 ----
-{abbrev(series)} {reportnumber} {abbrev(volume)} {abbrev(revision)} {edition, optional}
+{abbrev(series)} {reportnumber} {abbrev(volume)} {abbrev(revision)} {(draft), optional} {edition, optional}
 ----
 
-NOTE: For FIPS, `reportnumber` is the full FIPS number, including revision, e.g.,
+NOTE: For FIPS, `{reportnumber}` is the full FIPS number, including revision, e.g.,
 `140-2`.
 
-(originally from https://github.com/metanorma/metanorma-nist/issues/88)
+NOTE: Originally from https://github.com/metanorma/metanorma-nist/issues/88.
 
 Short form date:
 
 * `Month YYYY`
 
-Examples:
+[example]
+====
+NIST SP 800-53r4 (20152201) supersedes NIST SP 800-53r4 (20140115)
+====
 
-* NIST SP 800-53r4 (20152201) supersedes NIST SP 800-53r4 (20140115)
-* NIST SP 800 63A (December 2017) supersedes NIST SP 800-63A
-* NIST SP 800 57 Part 1 Revision 4 supersedes NIST SP 800-57 Part 1 Revision 3 ("Rev." is also accepted, and converted to "Revision")
-* NIST SP 800 160 Volume 1 supersedes NIST SP 800-160 (20180103) ("Vol." is also accepted, and converted to "Volume")
-* Undated form "NIST SP 800 53r4"
+[example]
+====
+NIST SP 800 63A (December 2017) supersedes NIST SP 800-63A
+====
+
+[example]
+====
+NIST SP 800 57 Part 1 Revision 4 supersedes NIST SP 800-57 Part 1 Revision 3 ("Rev." is also accepted, and converted to "Revision")
+====
+
+[example]
+====
+NIST SP 800 160 Volume 1 supersedes NIST SP 800-160 (20180103) ("Vol." is also accepted, and converted to "Volume")
+====
+
+[example]
+====
+Undated form "NIST SP 800 53r4"
+====
 
 Strip Revision and Date from title, only if the Revision and Date are unique for
-each document number. These are identified as "Rev. ...", "Revision ...." and "
-(Month YYYY)", whichever comes first.
+each document number. These are identified as "Rev. {number}", "Revision {number}" and
+"(Month YYYY)", whichever comes first.
 
 [[patterns-mr]]
 === Machine-readable PubID
 
-Machine-readable syntax:
+PubID form intended for machine parsing. Special care is taken to eliminate
+empty spaces and limit the character set to alphanumeric characters.
+
+The syntax could be:
 
 ----
 {publisher}.{series}.[{stage}.]{reportnumber}.{part}.{revision}.[{lang}.]{update-date}
@@ -121,11 +170,34 @@ edition. Preferably in the `-yyyymmdd` format.
 
 Some examples:
 
-* `NIST.SP.800-53r4-20152201` supersedes `NIST.SP.800-53r4-20140115`
-* `NIST.SP.800-63A-20171201` supersedes `NIST.SP.800-63A`
-* `NIST.SP.800-57pt1r4` supersedes `NIST.SP.800-57pt1r3`
-* `NIST.SP.800-160v1` supersedes `NIST.SP.800-160-20180103`
-* `NIST.IR.8204.u1-2019` supersedes `NIST.IR.8204`
-* The undated form is `NIST.SP.800-53r4`
+[example]
+====
+`NIST.SP.800-53r4-20152201` supersedes `NIST.SP.800-53r4-20140115`
+====
 
-(originally from https://github.com/metanorma/metanorma-nist/issues/88)
+[example]
+====
+`NIST.SP.800-63A-20171201` supersedes `NIST.SP.800-63A`
+====
+
+[example]
+====
+`NIST.SP.800-57pt1r4` supersedes `NIST.SP.800-57pt1r3`
+====
+
+[example]
+====
+`NIST.SP.800-160v1` supersedes `NIST.SP.800-160-20180103`
+====
+
+[example]
+====
+`NIST.IR.8204.u1-2019` supersedes `NIST.IR.8204`
+====
+
+[example]
+====
+The undated form is `NIST.SP.800-53r4`
+====
+
+NOTE: Originally from https://github.com/metanorma/metanorma-nist/issues/88.

@@ -232,11 +232,11 @@ The contents and pattern of the report number are dependent on the series.
 
 Possible values:
 
-* {sequence number}
-* {subseries}-{sequence number}
-* {sequence number}-{volume}
-* {sequence number}-{edition}
-* {subseries}-{sequence number}-{edition}
+* `{sequence number}`
+* `{subseries}-{sequence number}`
+* `{sequence number}-{volume}`
+* `{sequence number}-{edition}`
+* `{subseries}-{sequence number}-{edition}`
 * etc.
 
 A "Part" can also be indicated by an appended alphabetic character to the end.
@@ -310,7 +310,7 @@ These documents will display the text "includes updates as of...".
 In this case the document identifier will include the element "Update".
 
 .Update values
-[cols="4, 2", options="header"]
+[cols="4, 2, 2", options="header"]
 |===
 | Name | Abbrev and Short | MR
 
@@ -328,4 +328,4 @@ The first update is numbered 1, and so forth.
 
 The year last updated, shown as a suffix to the identifier.
 
-* "{identifier}:{update-year}"
+* `{identifier}:{update-year}`
